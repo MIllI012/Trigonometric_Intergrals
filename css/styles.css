@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'SUITE-Regular', monospace;
+}
+
+body {
+    background-color: #1e1f22;
+    color: #fff;
+}
+
+#md0 {
+    width: 90%;
+    margin: auto;
+}
+
+.latex {
+    display: table;
+    margin: auto;
+    line-height: 32pt; !important;
+}
+
+.squ {
+    width: 0.7em;
+    height: 0.7em;
+    margin-right: 0.5em;
+    display: inline-block;
+    background-color: #aaf;
+}
+
+span {
+    padding: 0.01em 0;
+}
+
+b {
+    color: #aaf;
+}
+
+section {
+    padding: 1em;
+}
+
+.grid > p > b {
+    color: #f66 !important;
+}
+
+.grid {
+    border: 3px solid #ff6666;
+}
+
+.gridT {
+    color: #f66 !important
+}
+
+.grid > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 1em 0;
+}
+
+#problem_list {
+    list-style-type: none;
+    padding: 0;
+    line-height: 40px;
+}
