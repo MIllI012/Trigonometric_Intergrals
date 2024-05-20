@@ -19,709 +19,709 @@
     }</script>
 </head>
 <body>
-<div id="md0">
-    <section>
-        <h1>Trigonometric Integrals</h1>
-        <p>In this section we use trigonometric identities to integrate certain combinations of trigonometric
-            functions</p>
-        <p><span class="squ"></span><b>Integrals of Powers of Sine and Cosine</b><br>We begin by considering integrals
-            in which the integrand is
-            a
-            power
-            of sine, a power of cosine, or a product of these.</p>
-    </section>
-    <section id="section1">
-        <p><b>EXAMPLE 1</b> Evaluate $\int cos^{3}\,{x}\,dx$</p>
-        <p><b>SOLUTION</b> Simply substituting $u − cos\,{x}$ isn’t helpful, since then $du − 2sin\,{x}\,dx$. In order
-            to
-            integrate
-            powers of cosine, we would need an extra sin x factor. Similarly, a power of sine would require an extra
-            $cos\,{x}$
-            factor. Thus here we can separate one cosine factor and convert the remaining $cos^{2}\,{x}$ factor to an
-            expression
-            involving sine using the identity $sin^{2}\,{x} + cos^{2}\,{x} = 1$</p>
-        <p class="latex">$cos^{3}\,{x} = cos^{2}\,{x} \cdot cos\,{x} = (1 - sin^{2}\,{x}) \cdot cos\,{x}$</p>
-        <p>We can then evaluate the integral by substituting $u − sin\,{x}$, so $du − cos\,{x}\,dx$ and</p>
-        <p class="latex">$\int\,cos^{3}\,{x} = \int\,cos^{2}\,{x} \cdot cos\,{x} = \int\,(1 - sin^{2}\,{x}) \cdot
-            cos\,{x}$
-            <br>$\qquad=\int\,(1-u^{2})\,du = u - \tfrac {1} {3}u^{3} + C$
-            <br>$\qquad=sin\,{x} - \tfrac {1} {3} sin^{3}\,{x} + C$</p>
-        <p>In general, we try to write an integrand involving powers of sine and cosine in a form where we have only one
-            sine factor (and the remainder of the expression in terms of
-            cosine) or only one cosine factor (and the remainder of the expression in terms of sine). The identity
-            $sin^{2}\,{x} + cos^{2}\,{x} = 1$
-            enables us to convert back and forth between even powers of sine and cosine.</p>
-    </section>
-    <section id="section2">
-        <p><b>EXAMPLE 2</b> Find $\int\,sin^{5}\,{x}\,cos^{2}\,{x}\,dx$</p>
-        <p><b>SOLUTION</b>We could convert $cos^{2} {x}$ to $1 - 2 sin^{2}\,{x}$, but we would be left with an
-            expression in terms of $sin\,{x}$ with no extra $cos {x}$ factor. Instead, we separate a single sine
-            factor and rewrite the remaining $sin^{4}\,{x}$ factor in terms of $cos\,{x}$:</p>
-        <p class="latex">$sin^{5}\,{x} \cdot cos^{2}\,{x}=(sin^{2}\,{x})^{2} \cdot cos^{2}\,{x}sin\,{x} =
-            (1-cos^{2}\,{x})^{2} \cdot cos^{2}\,{x} \cdot sin\,{x}$</p>
-        <p>Substituting $u=cos\,{x}$, we have $du = -sin\,{x}\;dx$ and so</p>
-        <p class="latex">$\int \,sin^{5}\,{x}\cdot cos^{2}\,{x}\,dx\,=\,\int (sin^{2}\,{x})^{2} \cdot cos^{2}\,{x} \cdot
-            sin\,{x}\;dx$<br>$\qquad=\int\,(1-cos^{2}\,{x})^{2}\cdot cos^{2}\,{x}\;dx$
-            <br>$\qquad=\int\,(1-u^{2})^{2}u^{2}(-du)\;=\;-\int(u^{2}-2u^{4}+u^{6})\;du$
-            <br>$\qquad=(\tfrac{u^{3}}{3}-2\tfrac{u^{5}}{5}+\tfrac{u^{7}}{7}\,+\,C)$
-            <br>$\qquad=\tfrac{1}{3}cos^{3}\,{x}+\tfrac{2}{5}cos^{5}\,{x}-\tfrac{1}{7}cos^{7}\,{x}\,+\,C$</p>
-        <canvas id="chart1"></canvas>
-        <script type="text/javascript">
-            const ctx1 = document.getElementById('chart1').getContext('2d');
+<!--<div id="md0">-->
+<!--    <section>-->
+<!--        <h1>Trigonometric Integrals</h1>-->
+<!--        <p>In this section we use trigonometric identities to integrate certain combinations of trigonometric-->
+<!--            functions</p>-->
+<!--        <p><span class="squ"></span><b>Integrals of Powers of Sine and Cosine</b><br>We begin by considering integrals-->
+<!--            in which the integrand is-->
+<!--            a-->
+<!--            power-->
+<!--            of sine, a power of cosine, or a product of these.</p>-->
+<!--    </section>-->
+<!--    <section id="section1">-->
+<!--        <p><b>EXAMPLE 1</b> Evaluate $\int cos^{3}\,{x}\,dx$</p>-->
+<!--        <p><b>SOLUTION</b> Simply substituting $u − cos\,{x}$ isn’t helpful, since then $du − 2sin\,{x}\,dx$. In order-->
+<!--            to-->
+<!--            integrate-->
+<!--            powers of cosine, we would need an extra sin x factor. Similarly, a power of sine would require an extra-->
+<!--            $cos\,{x}$-->
+<!--            factor. Thus here we can separate one cosine factor and convert the remaining $cos^{2}\,{x}$ factor to an-->
+<!--            expression-->
+<!--            involving sine using the identity $sin^{2}\,{x} + cos^{2}\,{x} = 1$</p>-->
+<!--        <p class="latex">$cos^{3}\,{x} = cos^{2}\,{x} \cdot cos\,{x} = (1 - sin^{2}\,{x}) \cdot cos\,{x}$</p>-->
+<!--        <p>We can then evaluate the integral by substituting $u − sin\,{x}$, so $du − cos\,{x}\,dx$ and</p>-->
+<!--        <p class="latex">$\int\,cos^{3}\,{x} = \int\,cos^{2}\,{x} \cdot cos\,{x} = \int\,(1 - sin^{2}\,{x}) \cdot-->
+<!--            cos\,{x}$-->
+<!--            <br>$\qquad=\int\,(1-u^{2})\,du = u - \tfrac {1} {3}u^{3} + C$-->
+<!--            <br>$\qquad=sin\,{x} - \tfrac {1} {3} sin^{3}\,{x} + C$</p>-->
+<!--        <p>In general, we try to write an integrand involving powers of sine and cosine in a form where we have only one-->
+<!--            sine factor (and the remainder of the expression in terms of-->
+<!--            cosine) or only one cosine factor (and the remainder of the expression in terms of sine). The identity-->
+<!--            $sin^{2}\,{x} + cos^{2}\,{x} = 1$-->
+<!--            enables us to convert back and forth between even powers of sine and cosine.</p>-->
+<!--    </section>-->
+<!--    <section id="section2">-->
+<!--        <p><b>EXAMPLE 2</b> Find $\int\,sin^{5}\,{x}\,cos^{2}\,{x}\,dx$</p>-->
+<!--        <p><b>SOLUTION</b>We could convert $cos^{2} {x}$ to $1 - 2 sin^{2}\,{x}$, but we would be left with an-->
+<!--            expression in terms of $sin\,{x}$ with no extra $cos {x}$ factor. Instead, we separate a single sine-->
+<!--            factor and rewrite the remaining $sin^{4}\,{x}$ factor in terms of $cos\,{x}$:</p>-->
+<!--        <p class="latex">$sin^{5}\,{x} \cdot cos^{2}\,{x}=(sin^{2}\,{x})^{2} \cdot cos^{2}\,{x}sin\,{x} =-->
+<!--            (1-cos^{2}\,{x})^{2} \cdot cos^{2}\,{x} \cdot sin\,{x}$</p>-->
+<!--        <p>Substituting $u=cos\,{x}$, we have $du = -sin\,{x}\;dx$ and so</p>-->
+<!--        <p class="latex">$\int \,sin^{5}\,{x}\cdot cos^{2}\,{x}\,dx\,=\,\int (sin^{2}\,{x})^{2} \cdot cos^{2}\,{x} \cdot-->
+<!--            sin\,{x}\;dx$<br>$\qquad=\int\,(1-cos^{2}\,{x})^{2}\cdot cos^{2}\,{x}\;dx$-->
+<!--            <br>$\qquad=\int\,(1-u^{2})^{2}u^{2}(-du)\;=\;-\int(u^{2}-2u^{4}+u^{6})\;du$-->
+<!--            <br>$\qquad=(\tfrac{u^{3}}{3}-2\tfrac{u^{5}}{5}+\tfrac{u^{7}}{7}\,+\,C)$-->
+<!--            <br>$\qquad=\tfrac{1}{3}cos^{3}\,{x}+\tfrac{2}{5}cos^{5}\,{x}-\tfrac{1}{7}cos^{7}\,{x}\,+\,C$</p>-->
+<!--        <canvas id="chart1"></canvas>-->
+<!--        <script type="text/javascript">-->
+<!--            const ctx1 = document.getElementById('chart1').getContext('2d');-->
 
-            const f1 = x => Math.pow(Math.cos(x), 5) * Math.pow(Math.sin(x), 2);
+<!--            const f1 = x => Math.pow(Math.cos(x), 5) * Math.pow(Math.sin(x), 2);-->
 
-            const xValues1 = [];
-            const yValues1 = [];
-            const intYValues1 = [];
-            const xMin1 = -2 * Math.PI;
-            const xMax1 = 2 * Math.PI;
-            const step1 = 0.1;
+<!--            const xValues1 = [];-->
+<!--            const yValues1 = [];-->
+<!--            const intYValues1 = [];-->
+<!--            const xMin1 = -2 * Math.PI;-->
+<!--            const xMax1 = 2 * Math.PI;-->
+<!--            const step1 = 0.1;-->
 
-            let integral1 = 0;
-            for (let x = xMin1; x <= xMax1; x += step1) {
-                xValues1.push(x);
-                const y = f1(x);
-                yValues1.push(y);
-                integral1 += y * step1;
-                intYValues1.push(integral1);
-            }
+<!--            let integral1 = 0;-->
+<!--            for (let x = xMin1; x <= xMax1; x += step1) {-->
+<!--                xValues1.push(x);-->
+<!--                const y = f1(x);-->
+<!--                yValues1.push(y);-->
+<!--                integral1 += y * step1;-->
+<!--                intYValues1.push(integral1);-->
+<!--            }-->
 
-            const myChart1 = new Chart(ctx1, {
-                type: 'line',
-                data: {
-                    labels: xValues1,
-                    datasets: [
-                        {
-                            label: 'y = (cos(x))^5 * (sin(x))^2',
-                            data: yValues1,
-                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                            borderColor: 'rgba(153, 102, 255, 1)',
-                            borderWidth: 1
-                        },
-                        {
-                            label: 'Integral y = (cos(x))^5 * (sin(x))^2 dx',
-                            data: intYValues1,
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            borderWidth: 1
-                        }
-                    ]
-                },
-                options: {
-                    scales: {
-                        x: {
-                            type: 'linear',
-                            display: true,
-                            position: 'bottom'
-                        },
-                        y: {
-                            display: true,
-                            position: 'left'
-                        }
-                    }
-                }
-            });
-        </script>
-        <p>In the preceding examples, an odd power of sine or cosine enabled us to separate a
-            single factor and convert the remaining even power. If the integrand contains even powers of both sine and
-            cosine, this strategy fails. In this case, we can take advantage of the
-            following half-angle identities (see Equations 18b and 18a in Appendix D):</p>
-        <p class="latex">$sin^{2}\,{x}\;=\;\tfrac{1}{2}(1-cos^{2}\,{x})$ and
-            $cos^{2}\,{x}\;=\;\tfrac{1}{2}(1+cos\,{2x})$</p>
-    </section>
-    <section id="section3">
-        <p><b>EXAMPLE 3</b> Evaluate $\int^{\pi}_{0}\,sin^{2}\,{x}\;dx$.</p>
-        <p><b>SOLUTION</b> If we write $sin^{2}\,{x}\,=\,1-\,cos^{2}\,{x}$, the integral is no simpler to evaluate.
-            Using the half-angle formula for $sin^{2}\,{x}$, however, we have</p>
-        <p>Evaluate $\int^{\pi}_{0}{sin^{2}\,{x}\;dx}\;=\;\tfrac{1}{2}\int^{\pi}{0}{(1-cos\,{2x})}\;dx$
-            <br>$\qquad=[\tfrac{1}{2}(x-\tfrac{1}{2}sin\,{2x}]^{\pi}_{0}$
-            <br>$=\tfrac{1}{2}(\pi\,-\,\tfrac{1}{2}sin\,{2x})-\tfrac{1}{2}(0\,\tfrac{1}{2}sin\,{0})\;=\;\tfrac{1}{2}\pi$
-        </p>
-        <p>Notice that we mentally made the substitution u − 2x when integrating cos 2x. Another
-            method for evaluating this integral was given in Exercise 7.1.53.</p>
-        <canvas id="chart2"></canvas>
-        <script type="text/javascript">
-            const ctx2 = document.getElementById('chart2').getContext('2d');
+<!--            const myChart1 = new Chart(ctx1, {-->
+<!--                type: 'line',-->
+<!--                data: {-->
+<!--                    labels: xValues1,-->
+<!--                    datasets: [-->
+<!--                        {-->
+<!--                            label: 'y = (cos(x))^5 * (sin(x))^2',-->
+<!--                            data: yValues1,-->
+<!--                            backgroundColor: 'rgba(153, 102, 255, 0.2)',-->
+<!--                            borderColor: 'rgba(153, 102, 255, 1)',-->
+<!--                            borderWidth: 1-->
+<!--                        },-->
+<!--                        {-->
+<!--                            label: 'Integral y = (cos(x))^5 * (sin(x))^2 dx',-->
+<!--                            data: intYValues1,-->
+<!--                            backgroundColor: 'rgba(255, 99, 132, 0.2)',-->
+<!--                            borderColor: 'rgba(255, 99, 132, 1)',-->
+<!--                            borderWidth: 1-->
+<!--                        }-->
+<!--                    ]-->
+<!--                },-->
+<!--                options: {-->
+<!--                    scales: {-->
+<!--                        x: {-->
+<!--                            type: 'linear',-->
+<!--                            display: true,-->
+<!--                            position: 'bottom'-->
+<!--                        },-->
+<!--                        y: {-->
+<!--                            display: true,-->
+<!--                            position: 'left'-->
+<!--                        }-->
+<!--                    }-->
+<!--                }-->
+<!--            });-->
+<!--        </script>-->
+<!--        <p>In the preceding examples, an odd power of sine or cosine enabled us to separate a-->
+<!--            single factor and convert the remaining even power. If the integrand contains even powers of both sine and-->
+<!--            cosine, this strategy fails. In this case, we can take advantage of the-->
+<!--            following half-angle identities (see Equations 18b and 18a in Appendix D):</p>-->
+<!--        <p class="latex">$sin^{2}\,{x}\;=\;\tfrac{1}{2}(1-cos^{2}\,{x})$ and-->
+<!--            $cos^{2}\,{x}\;=\;\tfrac{1}{2}(1+cos\,{2x})$</p>-->
+<!--    </section>-->
+<!--    <section id="section3">-->
+<!--        <p><b>EXAMPLE 3</b> Evaluate $\int^{\pi}_{0}\,sin^{2}\,{x}\;dx$.</p>-->
+<!--        <p><b>SOLUTION</b> If we write $sin^{2}\,{x}\,=\,1-\,cos^{2}\,{x}$, the integral is no simpler to evaluate.-->
+<!--            Using the half-angle formula for $sin^{2}\,{x}$, however, we have</p>-->
+<!--        <p>Evaluate $\int^{\pi}_{0}{sin^{2}\,{x}\;dx}\;=\;\tfrac{1}{2}\int^{\pi}{0}{(1-cos\,{2x})}\;dx$-->
+<!--            <br>$\qquad=[\tfrac{1}{2}(x-\tfrac{1}{2}sin\,{2x}]^{\pi}_{0}$-->
+<!--            <br>$=\tfrac{1}{2}(\pi\,-\,\tfrac{1}{2}sin\,{2x})-\tfrac{1}{2}(0\,\tfrac{1}{2}sin\,{0})\;=\;\tfrac{1}{2}\pi$-->
+<!--        </p>-->
+<!--        <p>Notice that we mentally made the substitution u − 2x when integrating cos 2x. Another-->
+<!--            method for evaluating this integral was given in Exercise 7.1.53.</p>-->
+<!--        <canvas id="chart2"></canvas>-->
+<!--        <script type="text/javascript">-->
+<!--            const ctx2 = document.getElementById('chart2').getContext('2d');-->
 
-            const f2 = x => Math.pow(Math.sin(x), 2);
+<!--            const f2 = x => Math.pow(Math.sin(x), 2);-->
 
-            const xValues2 = [];
-            const yValues2 = [];
-            const xMin2 = 0;
-            const xMax2 = Math.PI;
-            const step2 = 0.1;
+<!--            const xValues2 = [];-->
+<!--            const yValues2 = [];-->
+<!--            const xMin2 = 0;-->
+<!--            const xMax2 = Math.PI;-->
+<!--            const step2 = 0.1;-->
 
-            for (let x = xMin2; x <= xMax2; x += step2) {
-                xValues2.push(x);
-                const y = f2(x);
-                yValues2.push(y);
-            }
+<!--            for (let x = xMin2; x <= xMax2; x += step2) {-->
+<!--                xValues2.push(x);-->
+<!--                const y = f2(x);-->
+<!--                yValues2.push(y);-->
+<!--            }-->
 
-            const myChart2 = new Chart(ctx2, {
-                type: 'line',
-                data: {
-                    labels: xValues2,
-                    datasets: [
-                        {
-                            label: 'y = (sin(x))^2',
-                            data: yValues2,
-                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                            borderColor: 'rgba(153, 102, 255, 1)',
-                            borderWidth: 1
-                        }
-                    ]
-                },
-                options: {
-                    scales: {
-                        x: {
-                            type: 'linear',
-                            display: true,
-                            position: 'bottom'
-                        },
-                        y: {
-                            display: true,
-                            position: 'left'
-                        }
-                    }
-                }
-            });
-        </script>
-    </section>
-    <section id="section4">
-        <p><b>EXAMPLE 4</b> Find $\int\,sin^{4}\,{x}\;dx$.</p>
-        <p><b>SOLUTION</b> We could evaluate this integral using the reduction formula for $\int\,sin^{n}\,{x}\;dx$
-            (Equation 7.1.7) together with Example 3 (as in Exercise 7.1.53), but a better method is
-            to write $sin^{4}\,{x}\;=\;(sin^{2}\,{x})^{2}$ and use a half-angle formula:
-        </p>
-        <p class="latex">$\int\,sin^{4}\,{x}\;dx\;=\;\int\,(sin^{2}\,{x})^{2}\;dx$
-            <br>$\qquad=\int\,[\tfrac{1}{2}(1\,-\,cos\,{2x})]^{2}\;dx$
-            <br>$\qquad=\tfrac{1}{4}\int\,[1\,-\,2\,cos\,{2x}\,+\,cos^{2}\,(2x)]\;dx$</p>
-        <p>Since $cos^{2}\,(2x)$ occurs, we use the half-angle formula for cosine to write</p>
-        <p class="latex">$cos^{2}\,({2x})\,=\,\tfrac{1}{2}[1\,+\,cos(2 \cdot
-            2x)]\,=\,\tfrac{1}{2}\,(1\,+\,cos\,{4x})$</p>
-        <p>This gives</p>
-        <p class="latex">
-            $\int\,sin^{4}\,{x}\;dx\,=\,\tfrac{1}{4}\int\,[1\,-\,2\,cos\,{2x}\,+\,\tfrac{1}{2}\,(1\,+\,cos\,{4x})]\;dx$
-            <br>$\qquad=\tfrac{1}{4}\int(\tfrac{3}{2}\,-\,2\,cos\,{2x}\,+\,\tfrac{1}{2}\,cos\,{4x})\;dx$
-            <br>$\qquad=\tfrac{1}{4}(\tfrac{3}{2}x\,-\,sin\,{2x}\,+\,\tfrac{1}{8}\,sin\,{4x})\,+\,C$
-        </p>
-        <p>To summarize, we list guidelines to follow when evaluating integrals of the form $\int\,sin^{m}\,{x} \cdot
-            cos^{n}\,{x}\;dx$, where $m `\geq`slant 0$ and $ n \geqslant 0 $ are integers.</p>
-        <section class="grid">
-            <p class="gridT"><b>Strategy for Evaluating</b> $\int\,sin^{m}\,{x}\cdot cos^{n}\,{x}\;dx$</p>
-            <ul>
-                <li>(a) If the power of cosine is odd $(n\,=\,2k\,+\,1)$, save one cosine factor and use
-                    $cos^{2}\,{x}\,=\,1\,-\,sin^{2}\,{x}$ to express the remaining factors in terms of sine:
-                </li>
-                <li class="latex">$\int\,sin^{m}\,{x}\cdot
-                    cos^{2k+1}\,{x}\;dx\,=\,\int\,sin^{m}\,{x}\,(cos^{2}\,{x})^{k}\,cos\,x\;dx$
-                    <br>$\qquad=\int\,sin^{m}\,{x}\,(1\,-\,sin^{2}\,{x})^{k}\,cos\,{x}\;dx$
-                </li>
-                <li>Then substitute $u\,=\,sin\,{x}$ See Example 1.</li>
-            </ul>
-            <ul>
-                <li>(b) If the power of sine is odd $(m\,=\,2k\,+\,1)$, save one sine factor and use
-                    $sin^{2}\,{x}\,=\,1\,-\,cos^{2}\,{x}$ to express the remaining factors in terms of cosine:
-                </li>
-                <li class="latex">$\int\,sin^{2k+1}\,{x} \cdot cos^{n}\,{x}\;dx\,=\,\int\,(sin^{2}\,{x})^{k} \cdot
-                    cos^{n}\,{x} \cdot cos^{n}\,{x} \cdot sin\,{x}\;dx$
-                    <br>$\qquad=\int\,(1\,-\,cos^{2}\,{x})^{k} \cdot cos^{n}\,{x} \cdot sin\,{x}\;dx$
-                </li>
-                <li>Then substitute $u\,=\,cos\,x$. See Example 2.
-                    <br>[Note that if the powers of both sine and cosine are odd, either (a) or (b) can be used.]
-                </li>
-            </ul>
-            <ul>
-                <li>(c) If the powers of both sine and cosine are even, use the half-angle identities</li>
-                <li class="latex">$sin^{2}\,{x}\,=\,\tfrac {1}{2}(1\,-\,cos\,{2x})$</li>
-                <li class="latex">$cos^{2}\,{x}\,=\,\tfrac {1}{2}(1\,+\,cos\,{2x})$</li>
-                <li>See Exa,ples 3 and 4.</li>
-                <li>It is sometimes helpful to use the identity</li>
-                <li class="latex">$sin\,{x} \cdot cos\,{x}\,=\,\tfrac{1}{2}sin\,{2x}$</li>
-            </ul>
-        </section>
-    </section>
-    <section>
-        <p><span class="squ"></span><b>Integrals of Powers of Secant and Tangent</b>
-            <br>We use similar reasoning to evaluate integrals of the form $\int\,tan^{m}\,{x} \cdot sec^{n}\,{x}\;dx$.
-            Because $(d/dx)\,tan\,x\,=\,sec^{2}\,x$, we can separate a $sec^{2}\,x$ factor and convert the remaining
-            (even)
-            power of secant to an expression involving tangent using the identity $sec^{2}\,{x}\,=\,1\,+\,tan^{2}\,x$.
-            Or, since $(d/dx)\,sec\,{x}\,=\,sec\,{x} \cdot tan\,{x}$, we can separate a $sec\,{x} \ cdot tan\,{x}$
-            factor and convert the
-            remaining (even) power of tangent to secant.</p>
-    </section>
-    <section id="section5">
-        <p><b>EXAMPLE 5</b> Evaluate $\int\,tan^{6}\,{x} \cdot sec^{4}\,{x}\;dx$.</p>
-        <p><b>SOLUTION</b> If we separate one $sec^{2}\,{x}$ factor, we can express the remaining $sec^{2}\,{x}$ factor
-            in terms of tangent using the identity $sec^{2}\,{x}\,+\,tan^{2}\,{x}$ We can then evaluate the
-            integral by substituting $u\,=\,tan\,{x}$ so that $du\,=\,sec^{2}\,{x}\;dx$:
-        </p>
-        <p class="latex">$\int\,tan{6}\,{x} \cdot sec^{4}\,{x}\;dx\,=\,\int tan^{6}\,{x} \cdot sec^{2}\,{x}\;dx$
-            <br>$\qquad=\,\int tan^{6}\,{x}\,(1\,+\,tan^{2}\,{x})\,sec^{2}\,{x}\;dx$
-            <br>$\qquad=\,\int u^{6}\,(1\,+\,u^{2})\;du\,=\,\int (u^{6}\,+\,u^{8})\;du$
-            <br>$\qquad=\,\tfrac{u^{7}}{7}\,+\,\tfrac{u^{9}}{9}\,+\,C\,=\,\tfrac{1}{7}tan^{7}\,{x}\,+\,\tfrac{1}{9}tan^{9}\,{x}\,+\,C$
-        </p>
-    </section>
-    <section id="section6">
-        <p><b>EXAMPLE 6</b> Find $\int tan^{5}\,{\theta} \cdot sec^{7}\,{\theta}$.</p>
-        <p><b>SOLUTION</b> If we separate a $sec^{2}\,{\theta}$ factor, as in the preceding example, we are left with
-            a $sec^{5}\,{\theta}$ factor, which isn’t easily converted to tangent. However, if we separate a
-            $sec\,{\theta} \cdot tan\,{\theta}$ factor, we can convert the remaining power of tangent to an expression
-            involving only secant using the identity $tan^{2}\,{\theta}\,=\,sec^{2}\,{\theta}\,-\,1$. We can then
-            evaluate the integral by substituting $u\,=\,sec\,{\theta}$, so $du\,=\,sec\,{\theta} \cdot
-            tan\,{\theta}\;d\theta$:</p>
-        <p class="latex">$\int tan^{5}\,{\theta} \cdot sec^{7}\,{\theta}\;d\theta\,=\,\int tan^{4}\,{\theta} \cdot
-            sec^{6}\,{\theta} \cdot sec\,{\theta} \cdot tan\,{\theta}\;d\theta$
-            <br>$\qquad=\int (sec^{2}\,{\theta}\,-\,1)^{2} \cdot sec^{6}\,{\theta} \cdot sec\,{\theta} \cdot
-            tan\,{\theta}\;d\theta$
-            <br>$\qquad=\int (u^{2}\,-\,1)^{2} \cdot u^{6}\;du$
-            <br>$\qquad=\int (u^{10}\,-\,2u^{8}\,+\,u^{6})\;du$
-            <br>$\qquad=\tfrac{u^{11}}{11}\,-\,2\tfrac{u^{9}}{9}\,+\,\tfrac{u^{7}}{7}\,+\,C$
-            <br>$\qquad=\tfrac{1}{11}sec^{11}\,{\theta}\,-\,\tfrac{2}{9}sec^{9}\,{\theta}\,+\,\tfrac{1}{7}sec^{7}\,{\theta}\,+\,C$
-        </p>
-        <p>The preceding examples demonstrate strategies for evaluating integrals of the form $\int tan^{m}\,{x} \cdot
-            sec^{n}\,{x}\;dx$ for two cases, which we summarize here.</p>
-        <section class="grid">
-            <p class="gridT"><b>Strategy for Evaluating</b> $\int tan^{m}\,{x} \cdot sec^{n}\,{x}\;dx$</p>
-            <ul>
-                <li>(a) If the power of secant is even $(n\,=\,2k,\,k\,\geqslant\,2)$, save a factor of $sec^{2}\,{x}$
-                    and
-                    use
-                    $sec^{2}\,{x}\,=\,1\,+\,tan^{2}\,{x}$ to express the remaining factors in terms of $tan\,{x}$ :
-                </li>
-                <li class="latex">$\int tan^{m} \cdot sec^{2k}\,{x}\;dx\,=\,\int tan^{m}\,{x} \cdot (sec^{2}\,{x})^{k-1}
-                    \cdot sec^{2}\,{x}\;dx$
-                    <br>$\qquad=\int tan^{m}\,{x} \cdot (1\,+\,tan^{2}\,{x})^{k-1} \cdot sec^{2}\,{x}\;dx$
-                </li>
-                <li>Then substitute $u\,=\,tan\,{x}$. See Example 5.</li>
-            </ul>
-            <ul>
-                <li>(b) If the power of tangent is odd $(m\,=\,2k\,+\,1)$, save a factor of $sec\,{x} \cdot tan\,{x}$
-                    and
-                    use $tan^{2}\,{x}\,=\,sec^{2}\,{x}\,-\,1$ to express the remaining factors in terms of $sec\,{x}$:
-                </li>
-                <li class="latex">$\int tan^{2k+1}\,{x} \cdot sec^{n}\,{x}\;dx\,=\,\int (tan^{2}\,{x})^{k} \cdot
-                    sec^{n-1}\,{x} \cdot sec\,{x} \cdot tan\,{x}\;dx$
-                    <br>$\qquad=\int(sec^{2}\,{x}\,-\,1)^{k} \cdot sec^{n-1}\,{x} \cdot sec\,{x} \cdot tan\,{x}\;dx$
-                </li>
-                <li>Then substitute $u\,=\,sec\,{x}$. See Example 6.</li>
-            </ul>
-        </section>
-        <p> For other cases, the guidelines are not as clear-cut. We may need to use identities,
-            integration by parts, and occasionally a little ingenuity. We will sometimes need to be
-            able to integrate $tan\,{x}$ by using the formula established in Chapter 6:</p>
-        <section class="grid latex"><p>$\int tan\,{x}\;dx\,=\,\ln\,{|sec\,{x}|\,+\,C}$</p></section>
-        <p>We will also need the indefinite integral of secant:</p>
-        <section class="grid latex"><p>$\int sec\,{x}\;dx\,=\,\ln\,{|\sec\,{x}\,+\,\tan\,{x}}|\,+\,C$</p></section>
-        <p>We could verify Formula 1 by differentiating the right side, or as follows. First we multiply numerator and
-            denominator by $sec\,{x}\,+\,tan\,{x}$:</p>
-        <p class="latex">$\int \sec{x}\;dx\,=\,\int sec\,{x}\,\tfrac{sec\,{x}\,+\,tan\,{x}}{sec\,{x}\,+\,tan\,{x}}\;dx$
-            <br>$\qquad=\,\int \tfrac{\sec^{2}\,{x}\,+\,\sec\,{x} \cdot \tan\,{x}}{\sec\,{x}\,+\,\tan\,{x}}\;dx$</p>
-        <p>If we substitute $u\,=\,\sec{x}\,+\,\tan{x}$, then $du\,=\,(\sec{x} \cdot \tan{x}\,+\,\sec^{2}{x})\;dx$, so
-            the integral becomes $\int (1/u)\;du\,=\,\ln{\|\,u\,\|}\,+\,C$. Thus we have</p>
-    </section>
-    <section id="section7">
-        <p><b>EXAMPLE 7</b> Find $\int\tan^{3}{x}\;dx.$</p>
-        <p><b>SOLUTION</b> Here only $\tan{x}$ occurs, so we use $\tan^{2}{x}\,=\,\sec^{2}{x}\,-\,1$ to rewrite a
-            $\tan^{2}{x}$ factor in terms of $\sec^{2}{x}$:</p>
-        <p class="latex">$\int\tan^{3}{x}\;dx\,=\,\int\tan{x} \cdot \tan^{2} {x}\;dx\,=\,\int\tan{x} \cdot
-            (\sec^{2}{x}\,-\,1)\;dx$
-            <br>$\qquad=\int\tan{x} \cdot \sec^{2}{x}\;dx\,-\,\int\tan{x}\;dx$
-            <br>$\qquad=\tfrac{1}{2}\tan^{2}{x}\,-\,\ln{|\sec{x}|}\,+\,C$</p>
-        <p>In the first integral we mentally substituted $u\,=\,\tan{x}$ so that $du\,=\,\sec^{2}{x}\;dx$.</p>
-        <p>If an even power of tangent appears with an odd power of secant, it is helpful to
-            express the integrand completely in terms of $\sec{x}$. Powers of $\sec{x}$ may require integration by
-            parts, as shown in the following example.</p>
-    </section>
-    <section id="section8">
-        <p><b>EXAMPLE 8</b> Find $\int\sec^{3}{x}\;dx$.</p>
-        <p><b>SOLUTION</b> Here we integrate by parts with</p>
-        <p class="latex">$u\,=\,\sec{x} \rightarrow du\,=\,\sec{x} \cdot \tan{x}\;dx$
-            <br>$dv\,=\,\sec^{2}{x}\;dx \rightarrow b\,=\,\tan{x}$</p>
-        <span>Then</span>
-        <p class="latex">$\int\sec^{3}{x}\;dx\,=\,\sec{x} \cdot \tan{x}\,-\,\int\sec{x} \cdot \tan^{2}{x}\;dx$
-            <br>$\qquad=\sec{x} \cdot \tan{x} \,-\, \int\sec{x} \cdot (\sec^{2}{x}\,-\,1)\;dx$
-            <br>$\qquad=\sec{x} \cdot \tan{x}\,-\,\int\sec^{3}{x}\;dx\,+\,\int\sec{x}\;dx$
-        </p>
-        <p>Using Formula 1 and solving for the required integral, we get</p>
-        <p class="latex">$\int\sec^{3}{x}\;dx\,=\,\tfrac{1}{2}\,\sec{x} \cdot
-            \tan{x}\,+\,\ln{|\sec{x}\,+\,\tan{x}|}\,+\,C$</p>
-        <p>Integrals such as the one in the preceding example may seem very special but they
-            occur frequently in applications of integration, as we will see in Chapter 8.
-            Finally, integrals of the form</p>
-        <p class="latex">$\int\cot^{m}{x} \cdot \csc^{n}{x}\;dx$</p>
-        <p>can be found in a similar way by using the identity $1\,+\,\cot^{2}{x}\,=\,\csc^{2}{x}$.</p>
-        <p><span class="squ"></span><b>Using Product Identities</b></p>
-        <p>The following product identities are useful in evaluating certain trigonometric integrals.</p>
-        <section class="grid"><p>To evaluate the integrals (a) $\int\sin{mx} \cdot \cos{n}\;dx$, (b) $\int\sin{mx} \cdot
-            \sin{nx}\;dx$, or (c) $\int\cos{mx} \cdot \cos{nx}\;dx$, use the corresponding identity:</p>
-            <ul class="latex">
-                <li>(a) $\sin{A} \cdot \cos{B}\,=\,\tfrac{1}{2}[\sin{(A\,-\,B}\,+\,\sin{(A\,+\,B)}]$</li>
-                <li>(b) $\sin{A} \cdot \sin{B}\,=\,\tfrac{1}{2}[\cos{(A\,-\,B}\,-\,\cos{(A\,+\,B)}]$</li>
-                <li>(c) $\cos{A} \cdot \cos{B}\,=\,\tfrac{1}{2}[\cos{(A\,-\,B}\,+\,\cos{(A\,+\,B)}]$</li>
-            </ul>
-        </section>
-    </section>
-    <section id="section9">
-        <p><b>EXAMPLE 9</b> Evaluate $\int\sin{4x} \cdot \cos{5x}\;dx$.</p>
-        <p><b>SOLUTION</b> This integral could be evaluated using integration by parts, but it's easier tp use the
-            identity in Equation 2(a) as follows:</p>
-        <p class="latex">$\int\sin{4x} \cdot \cos{5x}\;dx\,=\,\int\tfrac{1}{2}[\sin{(-x)} \,+\,\sin{9x}]\;dx$
-            <br>$\qquad=\tfrac{1}{2}\int(-\sin{x}\,+\,\sin{9x})\;dx$
-            <br>$\qquad=\tfrac{1}{2}(\cos{x}\,-\,\tfrac{1}{2}\cos{9x})\,+\,C$</p>
-    </section>
-    <section id="problem">
-        <ul id="problem_list">
-            <li>
-                <p>2. $\int\cos^{6}{y}\sin^{3}{y}\;dy$</p>
-                <p>
-                    $\int\sin^{6}{y}\cos^{2}{y}\cos{y}\;dy\,=\,\int\cos^{6}{y}(1\,-\,\cos^{2}{y})\sin{y}\;dy\,=\,u^{6}(1\,-\,u^{2})(-du)$
-                    <br>$\qquad
-                    =\int(u^{8}\,-\,u^{6})\;du\,=\,\tfrac{1}{9}u^{9}\,-\,\tfrac{1}{7}u^{7}\,+\,C\,=\,\tfrac{1}{9}\cos^{9}{y}\,-\,\tfrac{1}{7}\cos^{7}{y}\,+\,C$
-                </p>
-            </li>
-            <li>
-                <p>10. $\int^{\pi}_{0}\sin^{2}{t}\cos^{4}{t}\;dt$</p>
-                <p>
-                    $\tfrac{1}{4}\int^{\pi}{0}(4\sin^{2}{t}\cos^{2}{t})\cos^{2}{t}\;dt\,=\,\tfrac{1}{4}\int^{\pi}_{0}(2\sin{t}\cos{t})^{2}\tfrac{1}{2}(1\,+\,\cos{2t})\;dt$
-                    <br>$\qquad=\tfrac{1}{8}\int^{\pi}_{0}(2\sin{t})^{2}(1\,+\,\cos{t})\;dt\,=\,\tfrac{1}{8}\int^{\pi}_{0}(2\sin^{2}{2t}+\sin^{2}{2t}\cos{2t})\;dt$
-                    <br>$\qquad=\tfrac{1}{8}\int^{\pi}_{0}\sin^{2}{2t}\;dt\,+\,\tfrac{1}{8}\int^{\pi}_{0}\sin^{2}{2t}\cos{2t}\;dt\,=\,\tfrac{1}{8}\int^{\pi}_{0}\tfrac{1}{2}(1\,-\,\cos{4t})\;dt\,+\,\tfrac{1}{8}[\tfrac{1}{3}
-                    \cdot \tfrac{1}{2}\sin^{3}{2t}]^{\pi}_{0}$
-                    <br>$\qquad=\tfrac{1}{16}[t\,-\,\tfrac{1}{4}\sin{4t}]^{\pi}_{0}\,+\,\tfrac{1}{8}(0\,-\,0)\,=\,\tfrac{1}{16}[(\pi\,-\,0)\,-\,0]\,=\,\tfrac{\pi}{16}$
-                </p>
-            </li>
-            <li>
-                <p>20. $\int\sin{x}\cos{(\tfrac{1}{2}x)}\;dx$</p>
-                <p>
-                    $\int\sin{(2 \cdot \tfrac{1}{2}{x})}\cos{(\tfrac{1}{2}{x})}\;dx\,=\,\int
-                    2\sin{(\tfrac{1}{2}{x})}\cos^{2}{(\tfrac{1}{2}{x})}\;dx$
-                    <br>$\qquad=\int2u^{2}(-2du)\qquad[u\,=\,cos(\tfrac{1}{2}{x}),\,du\,=\,-\tfrac{1}{2}\sin{(\tfrac{1}{2}{x})\;dx}]$
-                    <br>$\qquad=-\tfrac{4}{3}{u}^{3}\,+\,C\,=\,-\tfrac{4}{3}\cos^{3}{(\tfrac{1}{2}{x})}\,+\,C$
-                </p>
-            </li>
-            <li>
-                <p>52. $\int x\sec{x}\tan{x}\;dx$</p>
-                <p>
-                    $\mathtt{Let}\;u\,=\,x,\,dv\,=\,\sec{x}\tan{x}\;dx\quad\Rightarrow\quad
-                    du\,=\,dx,\,v\,=\,\sec{x}\quad\mathtt{Then}$
-                    <br>$\int x\sec{x}\tan{x}\;dx\,=\,x\sec{x}\,-\,\int\sec{x}\;dx\,-\,\ln{|\sec{x}\,+\,\tan{x}|}\,+\,C$
-                </p>
-            </li>
-            <li>
-                <p>56. $\int\tfrac{1}{\sec{\theta}\,+\,1}\;d\theta$</p>
-                <p>
-                    $\int\tfrac{1}{\sec{\theta}\,+\,1}\;d\theta \cdot
-                    \tfrac{\sec{\theta}\,-\,1}{\sec{\theta}\,-\,1}\;d{\theta}\,=\,\tfrac{\sec{\theta}\,-\,1}{\sec^{2}{\theta}\,-\,1}\;d{\theta}\,=\,\int\tfrac{\sec{\theta}\,-\,1}{\tan^{2}{\theta}}\;d\theta$
-                    <br>$\qquad=\int\tfrac{\cos{\theta}}{\sin^{2}{\theta}}\;d\theta\,-\,\int\tfrac{\cos^{2}{\theta}}{\sin^{2}{\theta}}\;d\theta\,=\,\int\tfrac{\cos{\theta}}{\sin^{2}{\theta}}\;d\theta\,-\,\int\tfrac{1\,-\,\sin^{2}{\theta}}{\sin^{2}{\theta}}\;d\theta\,=\,\int\tfrac{1}{u^{2}}\;du\,-\,\int\csc^{2}{\theta}\;d\theta\,+\,\int
-                    d\theta$
-                    <br>$\qquad=\,-\tfrac{1}{\sin{\theta}}\,+\,\cot{\theta}\,+\,\theta\,+\,C$
-                </p>
-            </li>
-            <li>
-                <p>65. $y\,=\,\sin^{2}{x},\qquad y\,=\,\sin^{2}{x},\qquad 0 \leqslant x \leqslant \pi$</p>
-                <p>
-                    $A\,=\,\int^{\pi}_{0}(\sin^{2}{x}\,-\,\sin^{3}{x})\;dx\,=\,\int^{\pi}_{0}[\tfrac{1}{2}(1\,-\,\cos{2x})\,-\,\sin{x}(1\,-\,\cos^{2}{x})]\;dx$
-                    <br>$\qquad=\int^{\pi}_{0}(\tfrac{1}{2}\,-\,\tfrac{1}{2}\cos{2x})\;dx\,+\,\int^{-1}_{1}(1\,-\,u^{2})\;du$
-                    <br>$\qquad=[\tfrac{1}{2}x\,-\,\tfrac{1}{4}\sin{2x}]^{\pi}_{0}\,+\,2\int^{1}_{0}(u^{2}\,-\,1)\;du$
-                    <br>$\qquad=(\tfrac{1}{2}\pi\,-\,0)\,-\,(0\,-\,0)\,+\,2[\tfrac{1}{3}u^{3}\,-\,u]^{1}_{0}$
-                    <br>$\qquad=\tfrac{1}{2}\pi\,+\,2(\tfrac{1}{3}\,-\,1)\,=\,\tfrac{1}{2}\pi\,-\,\tfrac{4}{3}$
-                </p>
-                <canvas id="problem_65"></canvas>
-                <script type="text/javascript">
-                    const ctx65 = document.getElementById('problem_65').getContext('2d');
+<!--            const myChart2 = new Chart(ctx2, {-->
+<!--                type: 'line',-->
+<!--                data: {-->
+<!--                    labels: xValues2,-->
+<!--                    datasets: [-->
+<!--                        {-->
+<!--                            label: 'y = (sin(x))^2',-->
+<!--                            data: yValues2,-->
+<!--                            backgroundColor: 'rgba(153, 102, 255, 0.2)',-->
+<!--                            borderColor: 'rgba(153, 102, 255, 1)',-->
+<!--                            borderWidth: 1-->
+<!--                        }-->
+<!--                    ]-->
+<!--                },-->
+<!--                options: {-->
+<!--                    scales: {-->
+<!--                        x: {-->
+<!--                            type: 'linear',-->
+<!--                            display: true,-->
+<!--                            position: 'bottom'-->
+<!--                        },-->
+<!--                        y: {-->
+<!--                            display: true,-->
+<!--                            position: 'left'-->
+<!--                        }-->
+<!--                    }-->
+<!--                }-->
+<!--            });-->
+<!--        </script>-->
+<!--    </section>-->
+<!--    <section id="section4">-->
+<!--        <p><b>EXAMPLE 4</b> Find $\int\,sin^{4}\,{x}\;dx$.</p>-->
+<!--        <p><b>SOLUTION</b> We could evaluate this integral using the reduction formula for $\int\,sin^{n}\,{x}\;dx$-->
+<!--            (Equation 7.1.7) together with Example 3 (as in Exercise 7.1.53), but a better method is-->
+<!--            to write $sin^{4}\,{x}\;=\;(sin^{2}\,{x})^{2}$ and use a half-angle formula:-->
+<!--        </p>-->
+<!--        <p class="latex">$\int\,sin^{4}\,{x}\;dx\;=\;\int\,(sin^{2}\,{x})^{2}\;dx$-->
+<!--            <br>$\qquad=\int\,[\tfrac{1}{2}(1\,-\,cos\,{2x})]^{2}\;dx$-->
+<!--            <br>$\qquad=\tfrac{1}{4}\int\,[1\,-\,2\,cos\,{2x}\,+\,cos^{2}\,(2x)]\;dx$</p>-->
+<!--        <p>Since $cos^{2}\,(2x)$ occurs, we use the half-angle formula for cosine to write</p>-->
+<!--        <p class="latex">$cos^{2}\,({2x})\,=\,\tfrac{1}{2}[1\,+\,cos(2 \cdot-->
+<!--            2x)]\,=\,\tfrac{1}{2}\,(1\,+\,cos\,{4x})$</p>-->
+<!--        <p>This gives</p>-->
+<!--        <p class="latex">-->
+<!--            $\int\,sin^{4}\,{x}\;dx\,=\,\tfrac{1}{4}\int\,[1\,-\,2\,cos\,{2x}\,+\,\tfrac{1}{2}\,(1\,+\,cos\,{4x})]\;dx$-->
+<!--            <br>$\qquad=\tfrac{1}{4}\int(\tfrac{3}{2}\,-\,2\,cos\,{2x}\,+\,\tfrac{1}{2}\,cos\,{4x})\;dx$-->
+<!--            <br>$\qquad=\tfrac{1}{4}(\tfrac{3}{2}x\,-\,sin\,{2x}\,+\,\tfrac{1}{8}\,sin\,{4x})\,+\,C$-->
+<!--        </p>-->
+<!--        <p>To summarize, we list guidelines to follow when evaluating integrals of the form $\int\,sin^{m}\,{x} \cdot-->
+<!--            cos^{n}\,{x}\;dx$, where $m `\geq`slant 0$ and $ n \geqslant 0 $ are integers.</p>-->
+<!--        <section class="grid">-->
+<!--            <p class="gridT"><b>Strategy for Evaluating</b> $\int\,sin^{m}\,{x}\cdot cos^{n}\,{x}\;dx$</p>-->
+<!--            <ul>-->
+<!--                <li>(a) If the power of cosine is odd $(n\,=\,2k\,+\,1)$, save one cosine factor and use-->
+<!--                    $cos^{2}\,{x}\,=\,1\,-\,sin^{2}\,{x}$ to express the remaining factors in terms of sine:-->
+<!--                </li>-->
+<!--                <li class="latex">$\int\,sin^{m}\,{x}\cdot-->
+<!--                    cos^{2k+1}\,{x}\;dx\,=\,\int\,sin^{m}\,{x}\,(cos^{2}\,{x})^{k}\,cos\,x\;dx$-->
+<!--                    <br>$\qquad=\int\,sin^{m}\,{x}\,(1\,-\,sin^{2}\,{x})^{k}\,cos\,{x}\;dx$-->
+<!--                </li>-->
+<!--                <li>Then substitute $u\,=\,sin\,{x}$ See Example 1.</li>-->
+<!--            </ul>-->
+<!--            <ul>-->
+<!--                <li>(b) If the power of sine is odd $(m\,=\,2k\,+\,1)$, save one sine factor and use-->
+<!--                    $sin^{2}\,{x}\,=\,1\,-\,cos^{2}\,{x}$ to express the remaining factors in terms of cosine:-->
+<!--                </li>-->
+<!--                <li class="latex">$\int\,sin^{2k+1}\,{x} \cdot cos^{n}\,{x}\;dx\,=\,\int\,(sin^{2}\,{x})^{k} \cdot-->
+<!--                    cos^{n}\,{x} \cdot cos^{n}\,{x} \cdot sin\,{x}\;dx$-->
+<!--                    <br>$\qquad=\int\,(1\,-\,cos^{2}\,{x})^{k} \cdot cos^{n}\,{x} \cdot sin\,{x}\;dx$-->
+<!--                </li>-->
+<!--                <li>Then substitute $u\,=\,cos\,x$. See Example 2.-->
+<!--                    <br>[Note that if the powers of both sine and cosine are odd, either (a) or (b) can be used.]-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            <ul>-->
+<!--                <li>(c) If the powers of both sine and cosine are even, use the half-angle identities</li>-->
+<!--                <li class="latex">$sin^{2}\,{x}\,=\,\tfrac {1}{2}(1\,-\,cos\,{2x})$</li>-->
+<!--                <li class="latex">$cos^{2}\,{x}\,=\,\tfrac {1}{2}(1\,+\,cos\,{2x})$</li>-->
+<!--                <li>See Exa,ples 3 and 4.</li>-->
+<!--                <li>It is sometimes helpful to use the identity</li>-->
+<!--                <li class="latex">$sin\,{x} \cdot cos\,{x}\,=\,\tfrac{1}{2}sin\,{2x}$</li>-->
+<!--            </ul>-->
+<!--        </section>-->
+<!--    </section>-->
+<!--    <section>-->
+<!--        <p><span class="squ"></span><b>Integrals of Powers of Secant and Tangent</b>-->
+<!--            <br>We use similar reasoning to evaluate integrals of the form $\int\,tan^{m}\,{x} \cdot sec^{n}\,{x}\;dx$.-->
+<!--            Because $(d/dx)\,tan\,x\,=\,sec^{2}\,x$, we can separate a $sec^{2}\,x$ factor and convert the remaining-->
+<!--            (even)-->
+<!--            power of secant to an expression involving tangent using the identity $sec^{2}\,{x}\,=\,1\,+\,tan^{2}\,x$.-->
+<!--            Or, since $(d/dx)\,sec\,{x}\,=\,sec\,{x} \cdot tan\,{x}$, we can separate a $sec\,{x} \ cdot tan\,{x}$-->
+<!--            factor and convert the-->
+<!--            remaining (even) power of tangent to secant.</p>-->
+<!--    </section>-->
+<!--    <section id="section5">-->
+<!--        <p><b>EXAMPLE 5</b> Evaluate $\int\,tan^{6}\,{x} \cdot sec^{4}\,{x}\;dx$.</p>-->
+<!--        <p><b>SOLUTION</b> If we separate one $sec^{2}\,{x}$ factor, we can express the remaining $sec^{2}\,{x}$ factor-->
+<!--            in terms of tangent using the identity $sec^{2}\,{x}\,+\,tan^{2}\,{x}$ We can then evaluate the-->
+<!--            integral by substituting $u\,=\,tan\,{x}$ so that $du\,=\,sec^{2}\,{x}\;dx$:-->
+<!--        </p>-->
+<!--        <p class="latex">$\int\,tan{6}\,{x} \cdot sec^{4}\,{x}\;dx\,=\,\int tan^{6}\,{x} \cdot sec^{2}\,{x}\;dx$-->
+<!--            <br>$\qquad=\,\int tan^{6}\,{x}\,(1\,+\,tan^{2}\,{x})\,sec^{2}\,{x}\;dx$-->
+<!--            <br>$\qquad=\,\int u^{6}\,(1\,+\,u^{2})\;du\,=\,\int (u^{6}\,+\,u^{8})\;du$-->
+<!--            <br>$\qquad=\,\tfrac{u^{7}}{7}\,+\,\tfrac{u^{9}}{9}\,+\,C\,=\,\tfrac{1}{7}tan^{7}\,{x}\,+\,\tfrac{1}{9}tan^{9}\,{x}\,+\,C$-->
+<!--        </p>-->
+<!--    </section>-->
+<!--    <section id="section6">-->
+<!--        <p><b>EXAMPLE 6</b> Find $\int tan^{5}\,{\theta} \cdot sec^{7}\,{\theta}$.</p>-->
+<!--        <p><b>SOLUTION</b> If we separate a $sec^{2}\,{\theta}$ factor, as in the preceding example, we are left with-->
+<!--            a $sec^{5}\,{\theta}$ factor, which isn’t easily converted to tangent. However, if we separate a-->
+<!--            $sec\,{\theta} \cdot tan\,{\theta}$ factor, we can convert the remaining power of tangent to an expression-->
+<!--            involving only secant using the identity $tan^{2}\,{\theta}\,=\,sec^{2}\,{\theta}\,-\,1$. We can then-->
+<!--            evaluate the integral by substituting $u\,=\,sec\,{\theta}$, so $du\,=\,sec\,{\theta} \cdot-->
+<!--            tan\,{\theta}\;d\theta$:</p>-->
+<!--        <p class="latex">$\int tan^{5}\,{\theta} \cdot sec^{7}\,{\theta}\;d\theta\,=\,\int tan^{4}\,{\theta} \cdot-->
+<!--            sec^{6}\,{\theta} \cdot sec\,{\theta} \cdot tan\,{\theta}\;d\theta$-->
+<!--            <br>$\qquad=\int (sec^{2}\,{\theta}\,-\,1)^{2} \cdot sec^{6}\,{\theta} \cdot sec\,{\theta} \cdot-->
+<!--            tan\,{\theta}\;d\theta$-->
+<!--            <br>$\qquad=\int (u^{2}\,-\,1)^{2} \cdot u^{6}\;du$-->
+<!--            <br>$\qquad=\int (u^{10}\,-\,2u^{8}\,+\,u^{6})\;du$-->
+<!--            <br>$\qquad=\tfrac{u^{11}}{11}\,-\,2\tfrac{u^{9}}{9}\,+\,\tfrac{u^{7}}{7}\,+\,C$-->
+<!--            <br>$\qquad=\tfrac{1}{11}sec^{11}\,{\theta}\,-\,\tfrac{2}{9}sec^{9}\,{\theta}\,+\,\tfrac{1}{7}sec^{7}\,{\theta}\,+\,C$-->
+<!--        </p>-->
+<!--        <p>The preceding examples demonstrate strategies for evaluating integrals of the form $\int tan^{m}\,{x} \cdot-->
+<!--            sec^{n}\,{x}\;dx$ for two cases, which we summarize here.</p>-->
+<!--        <section class="grid">-->
+<!--            <p class="gridT"><b>Strategy for Evaluating</b> $\int tan^{m}\,{x} \cdot sec^{n}\,{x}\;dx$</p>-->
+<!--            <ul>-->
+<!--                <li>(a) If the power of secant is even $(n\,=\,2k,\,k\,\geqslant\,2)$, save a factor of $sec^{2}\,{x}$-->
+<!--                    and-->
+<!--                    use-->
+<!--                    $sec^{2}\,{x}\,=\,1\,+\,tan^{2}\,{x}$ to express the remaining factors in terms of $tan\,{x}$ :-->
+<!--                </li>-->
+<!--                <li class="latex">$\int tan^{m} \cdot sec^{2k}\,{x}\;dx\,=\,\int tan^{m}\,{x} \cdot (sec^{2}\,{x})^{k-1}-->
+<!--                    \cdot sec^{2}\,{x}\;dx$-->
+<!--                    <br>$\qquad=\int tan^{m}\,{x} \cdot (1\,+\,tan^{2}\,{x})^{k-1} \cdot sec^{2}\,{x}\;dx$-->
+<!--                </li>-->
+<!--                <li>Then substitute $u\,=\,tan\,{x}$. See Example 5.</li>-->
+<!--            </ul>-->
+<!--            <ul>-->
+<!--                <li>(b) If the power of tangent is odd $(m\,=\,2k\,+\,1)$, save a factor of $sec\,{x} \cdot tan\,{x}$-->
+<!--                    and-->
+<!--                    use $tan^{2}\,{x}\,=\,sec^{2}\,{x}\,-\,1$ to express the remaining factors in terms of $sec\,{x}$:-->
+<!--                </li>-->
+<!--                <li class="latex">$\int tan^{2k+1}\,{x} \cdot sec^{n}\,{x}\;dx\,=\,\int (tan^{2}\,{x})^{k} \cdot-->
+<!--                    sec^{n-1}\,{x} \cdot sec\,{x} \cdot tan\,{x}\;dx$-->
+<!--                    <br>$\qquad=\int(sec^{2}\,{x}\,-\,1)^{k} \cdot sec^{n-1}\,{x} \cdot sec\,{x} \cdot tan\,{x}\;dx$-->
+<!--                </li>-->
+<!--                <li>Then substitute $u\,=\,sec\,{x}$. See Example 6.</li>-->
+<!--            </ul>-->
+<!--        </section>-->
+<!--        <p> For other cases, the guidelines are not as clear-cut. We may need to use identities,-->
+<!--            integration by parts, and occasionally a little ingenuity. We will sometimes need to be-->
+<!--            able to integrate $tan\,{x}$ by using the formula established in Chapter 6:</p>-->
+<!--        <section class="grid latex"><p>$\int tan\,{x}\;dx\,=\,\ln\,{|sec\,{x}|\,+\,C}$</p></section>-->
+<!--        <p>We will also need the indefinite integral of secant:</p>-->
+<!--        <section class="grid latex"><p>$\int sec\,{x}\;dx\,=\,\ln\,{|\sec\,{x}\,+\,\tan\,{x}}|\,+\,C$</p></section>-->
+<!--        <p>We could verify Formula 1 by differentiating the right side, or as follows. First we multiply numerator and-->
+<!--            denominator by $sec\,{x}\,+\,tan\,{x}$:</p>-->
+<!--        <p class="latex">$\int \sec{x}\;dx\,=\,\int sec\,{x}\,\tfrac{sec\,{x}\,+\,tan\,{x}}{sec\,{x}\,+\,tan\,{x}}\;dx$-->
+<!--            <br>$\qquad=\,\int \tfrac{\sec^{2}\,{x}\,+\,\sec\,{x} \cdot \tan\,{x}}{\sec\,{x}\,+\,\tan\,{x}}\;dx$</p>-->
+<!--        <p>If we substitute $u\,=\,\sec{x}\,+\,\tan{x}$, then $du\,=\,(\sec{x} \cdot \tan{x}\,+\,\sec^{2}{x})\;dx$, so-->
+<!--            the integral becomes $\int (1/u)\;du\,=\,\ln{\|\,u\,\|}\,+\,C$. Thus we have</p>-->
+<!--    </section>-->
+<!--    <section id="section7">-->
+<!--        <p><b>EXAMPLE 7</b> Find $\int\tan^{3}{x}\;dx.$</p>-->
+<!--        <p><b>SOLUTION</b> Here only $\tan{x}$ occurs, so we use $\tan^{2}{x}\,=\,\sec^{2}{x}\,-\,1$ to rewrite a-->
+<!--            $\tan^{2}{x}$ factor in terms of $\sec^{2}{x}$:</p>-->
+<!--        <p class="latex">$\int\tan^{3}{x}\;dx\,=\,\int\tan{x} \cdot \tan^{2} {x}\;dx\,=\,\int\tan{x} \cdot-->
+<!--            (\sec^{2}{x}\,-\,1)\;dx$-->
+<!--            <br>$\qquad=\int\tan{x} \cdot \sec^{2}{x}\;dx\,-\,\int\tan{x}\;dx$-->
+<!--            <br>$\qquad=\tfrac{1}{2}\tan^{2}{x}\,-\,\ln{|\sec{x}|}\,+\,C$</p>-->
+<!--        <p>In the first integral we mentally substituted $u\,=\,\tan{x}$ so that $du\,=\,\sec^{2}{x}\;dx$.</p>-->
+<!--        <p>If an even power of tangent appears with an odd power of secant, it is helpful to-->
+<!--            express the integrand completely in terms of $\sec{x}$. Powers of $\sec{x}$ may require integration by-->
+<!--            parts, as shown in the following example.</p>-->
+<!--    </section>-->
+<!--    <section id="section8">-->
+<!--        <p><b>EXAMPLE 8</b> Find $\int\sec^{3}{x}\;dx$.</p>-->
+<!--        <p><b>SOLUTION</b> Here we integrate by parts with</p>-->
+<!--        <p class="latex">$u\,=\,\sec{x} \rightarrow du\,=\,\sec{x} \cdot \tan{x}\;dx$-->
+<!--            <br>$dv\,=\,\sec^{2}{x}\;dx \rightarrow b\,=\,\tan{x}$</p>-->
+<!--        <span>Then</span>-->
+<!--        <p class="latex">$\int\sec^{3}{x}\;dx\,=\,\sec{x} \cdot \tan{x}\,-\,\int\sec{x} \cdot \tan^{2}{x}\;dx$-->
+<!--            <br>$\qquad=\sec{x} \cdot \tan{x} \,-\, \int\sec{x} \cdot (\sec^{2}{x}\,-\,1)\;dx$-->
+<!--            <br>$\qquad=\sec{x} \cdot \tan{x}\,-\,\int\sec^{3}{x}\;dx\,+\,\int\sec{x}\;dx$-->
+<!--        </p>-->
+<!--        <p>Using Formula 1 and solving for the required integral, we get</p>-->
+<!--        <p class="latex">$\int\sec^{3}{x}\;dx\,=\,\tfrac{1}{2}\,\sec{x} \cdot-->
+<!--            \tan{x}\,+\,\ln{|\sec{x}\,+\,\tan{x}|}\,+\,C$</p>-->
+<!--        <p>Integrals such as the one in the preceding example may seem very special but they-->
+<!--            occur frequently in applications of integration, as we will see in Chapter 8.-->
+<!--            Finally, integrals of the form</p>-->
+<!--        <p class="latex">$\int\cot^{m}{x} \cdot \csc^{n}{x}\;dx$</p>-->
+<!--        <p>can be found in a similar way by using the identity $1\,+\,\cot^{2}{x}\,=\,\csc^{2}{x}$.</p>-->
+<!--        <p><span class="squ"></span><b>Using Product Identities</b></p>-->
+<!--        <p>The following product identities are useful in evaluating certain trigonometric integrals.</p>-->
+<!--        <section class="grid"><p>To evaluate the integrals (a) $\int\sin{mx} \cdot \cos{n}\;dx$, (b) $\int\sin{mx} \cdot-->
+<!--            \sin{nx}\;dx$, or (c) $\int\cos{mx} \cdot \cos{nx}\;dx$, use the corresponding identity:</p>-->
+<!--            <ul class="latex">-->
+<!--                <li>(a) $\sin{A} \cdot \cos{B}\,=\,\tfrac{1}{2}[\sin{(A\,-\,B}\,+\,\sin{(A\,+\,B)}]$</li>-->
+<!--                <li>(b) $\sin{A} \cdot \sin{B}\,=\,\tfrac{1}{2}[\cos{(A\,-\,B}\,-\,\cos{(A\,+\,B)}]$</li>-->
+<!--                <li>(c) $\cos{A} \cdot \cos{B}\,=\,\tfrac{1}{2}[\cos{(A\,-\,B}\,+\,\cos{(A\,+\,B)}]$</li>-->
+<!--            </ul>-->
+<!--        </section>-->
+<!--    </section>-->
+<!--    <section id="section9">-->
+<!--        <p><b>EXAMPLE 9</b> Evaluate $\int\sin{4x} \cdot \cos{5x}\;dx$.</p>-->
+<!--        <p><b>SOLUTION</b> This integral could be evaluated using integration by parts, but it's easier tp use the-->
+<!--            identity in Equation 2(a) as follows:</p>-->
+<!--        <p class="latex">$\int\sin{4x} \cdot \cos{5x}\;dx\,=\,\int\tfrac{1}{2}[\sin{(-x)} \,+\,\sin{9x}]\;dx$-->
+<!--            <br>$\qquad=\tfrac{1}{2}\int(-\sin{x}\,+\,\sin{9x})\;dx$-->
+<!--            <br>$\qquad=\tfrac{1}{2}(\cos{x}\,-\,\tfrac{1}{2}\cos{9x})\,+\,C$</p>-->
+<!--    </section>-->
+<!--    <section id="problem">-->
+<!--        <ul id="problem_list">-->
+<!--            <li>-->
+<!--                <p>2. $\int\cos^{6}{y}\sin^{3}{y}\;dy$</p>-->
+<!--                <p>-->
+<!--                    $\int\sin^{6}{y}\cos^{2}{y}\cos{y}\;dy\,=\,\int\cos^{6}{y}(1\,-\,\cos^{2}{y})\sin{y}\;dy\,=\,u^{6}(1\,-\,u^{2})(-du)$-->
+<!--                    <br>$\qquad-->
+<!--                    =\int(u^{8}\,-\,u^{6})\;du\,=\,\tfrac{1}{9}u^{9}\,-\,\tfrac{1}{7}u^{7}\,+\,C\,=\,\tfrac{1}{9}\cos^{9}{y}\,-\,\tfrac{1}{7}\cos^{7}{y}\,+\,C$-->
+<!--                </p>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>10. $\int^{\pi}_{0}\sin^{2}{t}\cos^{4}{t}\;dt$</p>-->
+<!--                <p>-->
+<!--                    $\tfrac{1}{4}\int^{\pi}{0}(4\sin^{2}{t}\cos^{2}{t})\cos^{2}{t}\;dt\,=\,\tfrac{1}{4}\int^{\pi}_{0}(2\sin{t}\cos{t})^{2}\tfrac{1}{2}(1\,+\,\cos{2t})\;dt$-->
+<!--                    <br>$\qquad=\tfrac{1}{8}\int^{\pi}_{0}(2\sin{t})^{2}(1\,+\,\cos{t})\;dt\,=\,\tfrac{1}{8}\int^{\pi}_{0}(2\sin^{2}{2t}+\sin^{2}{2t}\cos{2t})\;dt$-->
+<!--                    <br>$\qquad=\tfrac{1}{8}\int^{\pi}_{0}\sin^{2}{2t}\;dt\,+\,\tfrac{1}{8}\int^{\pi}_{0}\sin^{2}{2t}\cos{2t}\;dt\,=\,\tfrac{1}{8}\int^{\pi}_{0}\tfrac{1}{2}(1\,-\,\cos{4t})\;dt\,+\,\tfrac{1}{8}[\tfrac{1}{3}-->
+<!--                    \cdot \tfrac{1}{2}\sin^{3}{2t}]^{\pi}_{0}$-->
+<!--                    <br>$\qquad=\tfrac{1}{16}[t\,-\,\tfrac{1}{4}\sin{4t}]^{\pi}_{0}\,+\,\tfrac{1}{8}(0\,-\,0)\,=\,\tfrac{1}{16}[(\pi\,-\,0)\,-\,0]\,=\,\tfrac{\pi}{16}$-->
+<!--                </p>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>20. $\int\sin{x}\cos{(\tfrac{1}{2}x)}\;dx$</p>-->
+<!--                <p>-->
+<!--                    $\int\sin{(2 \cdot \tfrac{1}{2}{x})}\cos{(\tfrac{1}{2}{x})}\;dx\,=\,\int-->
+<!--                    2\sin{(\tfrac{1}{2}{x})}\cos^{2}{(\tfrac{1}{2}{x})}\;dx$-->
+<!--                    <br>$\qquad=\int2u^{2}(-2du)\qquad[u\,=\,cos(\tfrac{1}{2}{x}),\,du\,=\,-\tfrac{1}{2}\sin{(\tfrac{1}{2}{x})\;dx}]$-->
+<!--                    <br>$\qquad=-\tfrac{4}{3}{u}^{3}\,+\,C\,=\,-\tfrac{4}{3}\cos^{3}{(\tfrac{1}{2}{x})}\,+\,C$-->
+<!--                </p>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>52. $\int x\sec{x}\tan{x}\;dx$</p>-->
+<!--                <p>-->
+<!--                    $\mathtt{Let}\;u\,=\,x,\,dv\,=\,\sec{x}\tan{x}\;dx\quad\Rightarrow\quad-->
+<!--                    du\,=\,dx,\,v\,=\,\sec{x}\quad\mathtt{Then}$-->
+<!--                    <br>$\int x\sec{x}\tan{x}\;dx\,=\,x\sec{x}\,-\,\int\sec{x}\;dx\,-\,\ln{|\sec{x}\,+\,\tan{x}|}\,+\,C$-->
+<!--                </p>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>56. $\int\tfrac{1}{\sec{\theta}\,+\,1}\;d\theta$</p>-->
+<!--                <p>-->
+<!--                    $\int\tfrac{1}{\sec{\theta}\,+\,1}\;d\theta \cdot-->
+<!--                    \tfrac{\sec{\theta}\,-\,1}{\sec{\theta}\,-\,1}\;d{\theta}\,=\,\tfrac{\sec{\theta}\,-\,1}{\sec^{2}{\theta}\,-\,1}\;d{\theta}\,=\,\int\tfrac{\sec{\theta}\,-\,1}{\tan^{2}{\theta}}\;d\theta$-->
+<!--                    <br>$\qquad=\int\tfrac{\cos{\theta}}{\sin^{2}{\theta}}\;d\theta\,-\,\int\tfrac{\cos^{2}{\theta}}{\sin^{2}{\theta}}\;d\theta\,=\,\int\tfrac{\cos{\theta}}{\sin^{2}{\theta}}\;d\theta\,-\,\int\tfrac{1\,-\,\sin^{2}{\theta}}{\sin^{2}{\theta}}\;d\theta\,=\,\int\tfrac{1}{u^{2}}\;du\,-\,\int\csc^{2}{\theta}\;d\theta\,+\,\int-->
+<!--                    d\theta$-->
+<!--                    <br>$\qquad=\,-\tfrac{1}{\sin{\theta}}\,+\,\cot{\theta}\,+\,\theta\,+\,C$-->
+<!--                </p>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>65. $y\,=\,\sin^{2}{x},\qquad y\,=\,\sin^{2}{x},\qquad 0 \leqslant x \leqslant \pi$</p>-->
+<!--                <p>-->
+<!--                    $A\,=\,\int^{\pi}_{0}(\sin^{2}{x}\,-\,\sin^{3}{x})\;dx\,=\,\int^{\pi}_{0}[\tfrac{1}{2}(1\,-\,\cos{2x})\,-\,\sin{x}(1\,-\,\cos^{2}{x})]\;dx$-->
+<!--                    <br>$\qquad=\int^{\pi}_{0}(\tfrac{1}{2}\,-\,\tfrac{1}{2}\cos{2x})\;dx\,+\,\int^{-1}_{1}(1\,-\,u^{2})\;du$-->
+<!--                    <br>$\qquad=[\tfrac{1}{2}x\,-\,\tfrac{1}{4}\sin{2x}]^{\pi}_{0}\,+\,2\int^{1}_{0}(u^{2}\,-\,1)\;du$-->
+<!--                    <br>$\qquad=(\tfrac{1}{2}\pi\,-\,0)\,-\,(0\,-\,0)\,+\,2[\tfrac{1}{3}u^{3}\,-\,u]^{1}_{0}$-->
+<!--                    <br>$\qquad=\tfrac{1}{2}\pi\,+\,2(\tfrac{1}{3}\,-\,1)\,=\,\tfrac{1}{2}\pi\,-\,\tfrac{4}{3}$-->
+<!--                </p>-->
+<!--                <canvas id="problem_65"></canvas>-->
+<!--                <script type="text/javascript">-->
+<!--                    const ctx65 = document.getElementById('problem_65').getContext('2d');-->
 
-                    const f_65_1 = x => Math.pow(Math.sin(x), 2);
-                    const f_65_2 = x => Math.pow(Math.sin(x), 3);
+<!--                    const f_65_1 = x => Math.pow(Math.sin(x), 2);-->
+<!--                    const f_65_2 = x => Math.pow(Math.sin(x), 3);-->
 
-                    const xValues_f65_1 = [];
-                    const yValues_f65_1 = [];
-                    const yValues_f65_2 = [];
-                    const xMin_f65_1 = 0;
-                    const xMax_f65_1 = Math.PI;
-                    const step_f65 = Math.PI / 10;
+<!--                    const xValues_f65_1 = [];-->
+<!--                    const yValues_f65_1 = [];-->
+<!--                    const yValues_f65_2 = [];-->
+<!--                    const xMin_f65_1 = 0;-->
+<!--                    const xMax_f65_1 = Math.PI;-->
+<!--                    const step_f65 = Math.PI / 10;-->
 
-                    for (let x = xMin_f65_1; x <= xMax_f65_1; x += step_f65) {
-                        xValues_f65_1.push(x);
-                        if (x <= Math.PI) {
-                            const y1 = f_65_1(x);
-                            const y2 = f_65_2(x);
-                            yValues_f65_1.push(y1);
-                            yValues_f65_2.push(y2);
-                        }
-                    }
+<!--                    for (let x = xMin_f65_1; x <= xMax_f65_1; x += step_f65) {-->
+<!--                        xValues_f65_1.push(x);-->
+<!--                        if (x <= Math.PI) {-->
+<!--                            const y1 = f_65_1(x);-->
+<!--                            const y2 = f_65_2(x);-->
+<!--                            yValues_f65_1.push(y1);-->
+<!--                            yValues_f65_2.push(y2);-->
+<!--                        }-->
+<!--                    }-->
 
-                    const problem_65 = new Chart(ctx65, {
-                        type: 'line',
-                        data: {
-                            labels: xValues_f65_1,
-                            datasets: [
-                                {
-                                    label: 'y = cos(x)',
-                                    data: yValues_f65_1,
-                                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                                    borderColor: 'rgba(153, 102, 255, 1)',
-                                    borderWidth: 1
-                                },
-                                {
-                                    label: 'y = sec(x)',
-                                    data: yValues_f65_2,
-                                    backgroundColor: 'rgba(255, 153, 102, 0.2)',
-                                    borderColor: 'rgba(255, 153, 102, 1)',
-                                    borderWidth: 1
-                                }
-                            ]
-                        },
-                        options: {
-                            scales: {
-                                x: {
-                                    type: 'linear',
-                                    display: true,
-                                    position: 'bottom'
-                                },
-                                y: {
-                                    display: true,
-                                    position: 'left'
-                                }
-                            }
-                        }
-                    });
-                </script>
-            </li>
-            <li>
-                <p>66. $y\,=\,\tan{x},\qquad y\,=\,\tan^{2}{x},\qquad 0 \leqslant x \leqslant \pi/4$</p>
-                <p>
-                    $A\,=\,\int^{\pi/4}_{0}(\tan{x}\,-\,\tan^{2}{x})\;dx\,=\,\int^{\pi/4}_{0}(\tan{x}\,-\,\sec^{2}{x}\,+\,1)\;dx$
-                    <br>$\qquad=[\ln{|\sec{x}|}\,-\,\tan{x}\,+\,x]^{\pi/4}_{0}\,=\,(\ln{\sqrt{2}}\,-\,1\,+\,\tfrac{\pi}{4})\,-\,(\ln{1}\,-\,0\,+\,0)$
-                    <br>$\qquad=\ln{\sqrt{2}}\,-\,1\,+\,\tfrac{\pi}{4}$
-                </p>
-                <canvas id="problem_66"></canvas>
-                <script type="text/javascript">
-                    const ctx66 = document.getElementById('problem_66').getContext('2d');
+<!--                    const problem_65 = new Chart(ctx65, {-->
+<!--                        type: 'line',-->
+<!--                        data: {-->
+<!--                            labels: xValues_f65_1,-->
+<!--                            datasets: [-->
+<!--                                {-->
+<!--                                    label: 'y = cos(x)',-->
+<!--                                    data: yValues_f65_1,-->
+<!--                                    backgroundColor: 'rgba(153, 102, 255, 0.2)',-->
+<!--                                    borderColor: 'rgba(153, 102, 255, 1)',-->
+<!--                                    borderWidth: 1-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    label: 'y = sec(x)',-->
+<!--                                    data: yValues_f65_2,-->
+<!--                                    backgroundColor: 'rgba(255, 153, 102, 0.2)',-->
+<!--                                    borderColor: 'rgba(255, 153, 102, 1)',-->
+<!--                                    borderWidth: 1-->
+<!--                                }-->
+<!--                            ]-->
+<!--                        },-->
+<!--                        options: {-->
+<!--                            scales: {-->
+<!--                                x: {-->
+<!--                                    type: 'linear',-->
+<!--                                    display: true,-->
+<!--                                    position: 'bottom'-->
+<!--                                },-->
+<!--                                y: {-->
+<!--                                    display: true,-->
+<!--                                    position: 'left'-->
+<!--                                }-->
+<!--                            }-->
+<!--                        }-->
+<!--                    });-->
+<!--                </script>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>66. $y\,=\,\tan{x},\qquad y\,=\,\tan^{2}{x},\qquad 0 \leqslant x \leqslant \pi/4$</p>-->
+<!--                <p>-->
+<!--                    $A\,=\,\int^{\pi/4}_{0}(\tan{x}\,-\,\tan^{2}{x})\;dx\,=\,\int^{\pi/4}_{0}(\tan{x}\,-\,\sec^{2}{x}\,+\,1)\;dx$-->
+<!--                    <br>$\qquad=[\ln{|\sec{x}|}\,-\,\tan{x}\,+\,x]^{\pi/4}_{0}\,=\,(\ln{\sqrt{2}}\,-\,1\,+\,\tfrac{\pi}{4})\,-\,(\ln{1}\,-\,0\,+\,0)$-->
+<!--                    <br>$\qquad=\ln{\sqrt{2}}\,-\,1\,+\,\tfrac{\pi}{4}$-->
+<!--                </p>-->
+<!--                <canvas id="problem_66"></canvas>-->
+<!--                <script type="text/javascript">-->
+<!--                    const ctx66 = document.getElementById('problem_66').getContext('2d');-->
 
-                    const f_66_1 = x => Math.tan(x);
-                    const f_66_2 = x => Math.pow(Math.tan(x), 2);
+<!--                    const f_66_1 = x => Math.tan(x);-->
+<!--                    const f_66_2 = x => Math.pow(Math.tan(x), 2);-->
 
-                    const xValues_f66_1 = [];
-                    const yValues_f66_1 = [];
-                    const yValues_f66_2 = [];
-                    const xMin_f66_1 = 0;
-                    const xMax_f66_1 = Math.PI / 4;
-                    const step_f66 = Math.PI / 40;
+<!--                    const xValues_f66_1 = [];-->
+<!--                    const yValues_f66_1 = [];-->
+<!--                    const yValues_f66_2 = [];-->
+<!--                    const xMin_f66_1 = 0;-->
+<!--                    const xMax_f66_1 = Math.PI / 4;-->
+<!--                    const step_f66 = Math.PI / 40;-->
 
-                    for (let x = xMin_f66_1; x <= xMax_f66_1; x += step_f66) {
-                        xValues_f66_1.push(x / 2);
-                        const y1 = f_66_1(x);
-                        const y2 = f_66_2(x);
-                        yValues_f66_1.push(y1);
-                        yValues_f66_2.push(y2);
-                    }
+<!--                    for (let x = xMin_f66_1; x <= xMax_f66_1; x += step_f66) {-->
+<!--                        xValues_f66_1.push(x / 2);-->
+<!--                        const y1 = f_66_1(x);-->
+<!--                        const y2 = f_66_2(x);-->
+<!--                        yValues_f66_1.push(y1);-->
+<!--                        yValues_f66_2.push(y2);-->
+<!--                    }-->
 
-                    const problem_66 = new Chart(ctx66, {
-                        type: 'line',
-                        data: {
-                            labels: xValues_f66_1,
-                            datasets: [
-                                {
-                                    label: 'y = tan(x)',
-                                    data: yValues_f66_1,
-                                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                                    borderColor: 'rgba(153, 102, 255, 1)',
-                                    borderWidth: 1
-                                },
-                                {
-                                    label: 'y = tan^{2}(x)',
-                                    data: yValues_f66_2,
-                                    backgroundColor: 'rgba(255, 153, 102, 0.2)',
-                                    borderColor: 'rgba(255, 153, 102, 1)',
-                                    borderWidth: 1
-                                }
-                            ]
-                        },
-                        options: {
-                            scales: {
-                                x: {
-                                    type: 'linear',
-                                    display: true,
-                                    position: 'bottom'
-                                },
-                                y: {
-                                    display: true,
-                                    position: 'left'
-                                }
-                            }
-                        }
-                    });
-                </script>
-            </li>
-            <li>
-                <p>71. $y\,=\,\sin{x},\quad y\,=\,\cos{x},\quad 0 \leqslant x \leqslant \pi/4;\quad about\; y\,=\,1$</p>
-                <p>Using washers,</p>
-                <p>
-                    $V\,=\,\int^{\pi/4}_{0}\pi[(1\,-\,\sin{x})^{2}\,-\,(1\,-\,\cos{x})^{2}]\;dx$
-                    <br>$\qquad=\pi\int^{\pi/4}_{0}[(1\,-\,2\sin{x}\,+\,\sin^{2}{x})\,-\,(1\,-\,2\cos{x}\,+\,\cos^{2}{x})]\;dx$
-                    <br>$\qquad=\pi\int^{\pi/4}_{0}(2\cos{x}\,-\,2\sin{x}\,+\,\sin^{2}{x}\,-\,\cos^{2}{x})\;dx$
-                    <br>$\qquad=\pi\int^{\pi/4}_{0}(2\cos{x}\,-\,2\sin{x}\,+\,\cos{2x})\;dx\,=\,\pi[2\sin{x}\,+\,2\cos{x}\,-\,\tfrac{1}{2}\sin{2x}]^{\pi/4}_{0}$
-                    <br>$\qquad=\pi[(\sqrt{2}\,+\,\sqrt{2}\,-\,\tfrac{1}{2})\,-\,(0\,+\,2\,-\,0)]\,=\,\pi(2\sqrt{2}\,-\tfrac{5}{2})$
-                </p>
-                <canvas id="problem_71"></canvas>
-                <script type="text/javascript">
-                    const ctx71 = document.getElementById('problem_71').getContext('2d');
+<!--                    const problem_66 = new Chart(ctx66, {-->
+<!--                        type: 'line',-->
+<!--                        data: {-->
+<!--                            labels: xValues_f66_1,-->
+<!--                            datasets: [-->
+<!--                                {-->
+<!--                                    label: 'y = tan(x)',-->
+<!--                                    data: yValues_f66_1,-->
+<!--                                    backgroundColor: 'rgba(153, 102, 255, 0.2)',-->
+<!--                                    borderColor: 'rgba(153, 102, 255, 1)',-->
+<!--                                    borderWidth: 1-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    label: 'y = tan^{2}(x)',-->
+<!--                                    data: yValues_f66_2,-->
+<!--                                    backgroundColor: 'rgba(255, 153, 102, 0.2)',-->
+<!--                                    borderColor: 'rgba(255, 153, 102, 1)',-->
+<!--                                    borderWidth: 1-->
+<!--                                }-->
+<!--                            ]-->
+<!--                        },-->
+<!--                        options: {-->
+<!--                            scales: {-->
+<!--                                x: {-->
+<!--                                    type: 'linear',-->
+<!--                                    display: true,-->
+<!--                                    position: 'bottom'-->
+<!--                                },-->
+<!--                                y: {-->
+<!--                                    display: true,-->
+<!--                                    position: 'left'-->
+<!--                                }-->
+<!--                            }-->
+<!--                        }-->
+<!--                    });-->
+<!--                </script>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>71. $y\,=\,\sin{x},\quad y\,=\,\cos{x},\quad 0 \leqslant x \leqslant \pi/4;\quad about\; y\,=\,1$</p>-->
+<!--                <p>Using washers,</p>-->
+<!--                <p>-->
+<!--                    $V\,=\,\int^{\pi/4}_{0}\pi[(1\,-\,\sin{x})^{2}\,-\,(1\,-\,\cos{x})^{2}]\;dx$-->
+<!--                    <br>$\qquad=\pi\int^{\pi/4}_{0}[(1\,-\,2\sin{x}\,+\,\sin^{2}{x})\,-\,(1\,-\,2\cos{x}\,+\,\cos^{2}{x})]\;dx$-->
+<!--                    <br>$\qquad=\pi\int^{\pi/4}_{0}(2\cos{x}\,-\,2\sin{x}\,+\,\sin^{2}{x}\,-\,\cos^{2}{x})\;dx$-->
+<!--                    <br>$\qquad=\pi\int^{\pi/4}_{0}(2\cos{x}\,-\,2\sin{x}\,+\,\cos{2x})\;dx\,=\,\pi[2\sin{x}\,+\,2\cos{x}\,-\,\tfrac{1}{2}\sin{2x}]^{\pi/4}_{0}$-->
+<!--                    <br>$\qquad=\pi[(\sqrt{2}\,+\,\sqrt{2}\,-\,\tfrac{1}{2})\,-\,(0\,+\,2\,-\,0)]\,=\,\pi(2\sqrt{2}\,-\tfrac{5}{2})$-->
+<!--                </p>-->
+<!--                <canvas id="problem_71"></canvas>-->
+<!--                <script type="text/javascript">-->
+<!--                    const ctx71 = document.getElementById('problem_71').getContext('2d');-->
 
-                    const f_71_1 = x => Math.cos(x);
-                    const f_71_2 = x => Math.sin(x);
+<!--                    const f_71_1 = x => Math.cos(x);-->
+<!--                    const f_71_2 = x => Math.sin(x);-->
 
-                    const xValues_f71_1 = [];
-                    const yValues_f71_1 = [];
-                    const yValues_f71_2 = [];
-                    const xMin_f71_1 = 0;
-                    const xMax_f71_1 = Math.PI;
-                    const step_f71 = Math.PI / 10;
+<!--                    const xValues_f71_1 = [];-->
+<!--                    const yValues_f71_1 = [];-->
+<!--                    const yValues_f71_2 = [];-->
+<!--                    const xMin_f71_1 = 0;-->
+<!--                    const xMax_f71_1 = Math.PI;-->
+<!--                    const step_f71 = Math.PI / 10;-->
 
-                    for (let x = xMin_f71_1; x <= xMax_f71_1; x += step_f71) {
-                        xValues_f71_1.push(x);
-                        const y1 = f_71_1(x);
-                        const y2 = f_71_2(x);
-                        yValues_f71_1.push(y1);
-                        yValues_f71_2.push(y2);
-                    }
+<!--                    for (let x = xMin_f71_1; x <= xMax_f71_1; x += step_f71) {-->
+<!--                        xValues_f71_1.push(x);-->
+<!--                        const y1 = f_71_1(x);-->
+<!--                        const y2 = f_71_2(x);-->
+<!--                        yValues_f71_1.push(y1);-->
+<!--                        yValues_f71_2.push(y2);-->
+<!--                    }-->
 
-                    const problem_71 = new Chart(ctx71, {
-                        type: 'line',
-                        data: {
-                            labels: xValues_f71_1,
-                            datasets: [
-                                {
-                                    label: 'y = cos(x)',
-                                    data: yValues_f71_1,
-                                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                                    borderColor: 'rgba(153, 102, 255, 1)',
-                                    borderWidth: 1
-                                },
-                                {
-                                    label: 'y = sin(x)',
-                                    data: yValues_f71_2,
-                                    backgroundColor: 'rgba(255, 153, 102, 0.2)',
-                                    borderColor: 'rgba(255, 153, 102, 1)',
-                                    borderWidth: 1
-                                }
-                            ]
-                        },
-                        options: {
-                            scales: {
-                                x: {
-                                    type: 'linear',
-                                    display: true,
-                                    position: 'bottom'
-                                },
-                                y: {
-                                    display: true,
-                                    position: 'left'
-                                }
-                            }
-                        }
-                    });
-                </script>
-            </li>
-            <li>
-                <p>72. $y\,=\,\sec{x},\quad y\,=\,\cos{x},\quad 0 \leqslant x \leqslant \pi/3;\quad about\;
-                    y\,=\,-1$</p>
-                <p>Using washers,</p>
-                <p>
-                    $V\,=\,\int^{\pi/3}_{0}\pi\{[\sec{x}\,-\,(-1)]^{2}\,-\,[\cos{x}\,-\,(-1)]^{2}\}\;dx$
-                    <br>$\qquad=\pi\int^{\pi/3}_{0}[(\sec^{2}{x}\,+\,2\sec{x}\,+\,1)\,-\,(\cos^{2}{x}\,+\,2\cos{x}\,+\,1)]\;dx$
-                    <br>$\qquad=\pi\int^{\pi/3}_{0}[\sec^{2}{x}\,+\,2\sec{x}\,-\tfrac{1}{2}(1\,+\,\cos{2x})\,-\,2\cos{x}]\;dx$
-                    <br>$\qquad=\pi[\tan{x}\,+\,2\ln{|\sec{x}\,+\,\tan{x}|}\,-\,\tfrac{1}{2}{x}\,-\,\tfrac{1}{4}\sin{2x}\,-\,2\sin{x}]^{\pi/3}_{0}$
-                    <br>$\qquad=\pi[(\sqrt{3}\,+\,2\ln{(2\,+\,\sqrt{3})}\,-\,\tfrac{\pi}{6}\,-\,\tfrac{1}{8}\sqrt{3}\,-\,\sqrt{3})\,-\,0]$
-                    <br>$\qquad=2\pi\ln{(2\,+\,\sqrt{3})}\,-\,\tfrac{1}{6}\pi^{2}\,-\,\tfrac{1}{8}\pi\sqrt{3}$
-                </p>
-                <canvas id="problem_72"></canvas>
-                <script type="text/javascript">
-                    const ctx72 = document.getElementById('problem_72').getContext('2d');
+<!--                    const problem_71 = new Chart(ctx71, {-->
+<!--                        type: 'line',-->
+<!--                        data: {-->
+<!--                            labels: xValues_f71_1,-->
+<!--                            datasets: [-->
+<!--                                {-->
+<!--                                    label: 'y = cos(x)',-->
+<!--                                    data: yValues_f71_1,-->
+<!--                                    backgroundColor: 'rgba(153, 102, 255, 0.2)',-->
+<!--                                    borderColor: 'rgba(153, 102, 255, 1)',-->
+<!--                                    borderWidth: 1-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    label: 'y = sin(x)',-->
+<!--                                    data: yValues_f71_2,-->
+<!--                                    backgroundColor: 'rgba(255, 153, 102, 0.2)',-->
+<!--                                    borderColor: 'rgba(255, 153, 102, 1)',-->
+<!--                                    borderWidth: 1-->
+<!--                                }-->
+<!--                            ]-->
+<!--                        },-->
+<!--                        options: {-->
+<!--                            scales: {-->
+<!--                                x: {-->
+<!--                                    type: 'linear',-->
+<!--                                    display: true,-->
+<!--                                    position: 'bottom'-->
+<!--                                },-->
+<!--                                y: {-->
+<!--                                    display: true,-->
+<!--                                    position: 'left'-->
+<!--                                }-->
+<!--                            }-->
+<!--                        }-->
+<!--                    });-->
+<!--                </script>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>72. $y\,=\,\sec{x},\quad y\,=\,\cos{x},\quad 0 \leqslant x \leqslant \pi/3;\quad about\;-->
+<!--                    y\,=\,-1$</p>-->
+<!--                <p>Using washers,</p>-->
+<!--                <p>-->
+<!--                    $V\,=\,\int^{\pi/3}_{0}\pi\{[\sec{x}\,-\,(-1)]^{2}\,-\,[\cos{x}\,-\,(-1)]^{2}\}\;dx$-->
+<!--                    <br>$\qquad=\pi\int^{\pi/3}_{0}[(\sec^{2}{x}\,+\,2\sec{x}\,+\,1)\,-\,(\cos^{2}{x}\,+\,2\cos{x}\,+\,1)]\;dx$-->
+<!--                    <br>$\qquad=\pi\int^{\pi/3}_{0}[\sec^{2}{x}\,+\,2\sec{x}\,-\tfrac{1}{2}(1\,+\,\cos{2x})\,-\,2\cos{x}]\;dx$-->
+<!--                    <br>$\qquad=\pi[\tan{x}\,+\,2\ln{|\sec{x}\,+\,\tan{x}|}\,-\,\tfrac{1}{2}{x}\,-\,\tfrac{1}{4}\sin{2x}\,-\,2\sin{x}]^{\pi/3}_{0}$-->
+<!--                    <br>$\qquad=\pi[(\sqrt{3}\,+\,2\ln{(2\,+\,\sqrt{3})}\,-\,\tfrac{\pi}{6}\,-\,\tfrac{1}{8}\sqrt{3}\,-\,\sqrt{3})\,-\,0]$-->
+<!--                    <br>$\qquad=2\pi\ln{(2\,+\,\sqrt{3})}\,-\,\tfrac{1}{6}\pi^{2}\,-\,\tfrac{1}{8}\pi\sqrt{3}$-->
+<!--                </p>-->
+<!--                <canvas id="problem_72"></canvas>-->
+<!--                <script type="text/javascript">-->
+<!--                    const ctx72 = document.getElementById('problem_72').getContext('2d');-->
 
-                    const f_72_1 = x => Math.cos(x);
-                    const f_72_2 = x => 1 / Math.cos(x);
+<!--                    const f_72_1 = x => Math.cos(x);-->
+<!--                    const f_72_2 = x => 1 / Math.cos(x);-->
 
-                    const xValues_f72_1 = [];
-                    const yValues_f72_1 = [];
-                    const yValues_f72_2 = [];
-                    const xMin_f72_1 = 0;
-                    const xMax_f72_1 = Math.PI;
-                    const step_f72 = Math.PI / 40;
+<!--                    const xValues_f72_1 = [];-->
+<!--                    const yValues_f72_1 = [];-->
+<!--                    const yValues_f72_2 = [];-->
+<!--                    const xMin_f72_1 = 0;-->
+<!--                    const xMax_f72_1 = Math.PI;-->
+<!--                    const step_f72 = Math.PI / 40;-->
 
-                    for (let x = xMin_f72_1; x <= xMax_f72_1; x += step_f72) {
-                        xValues_f72_1.push(x);
-                        if (x <= Math.PI / 3) {
-                            const y1 = f_72_1(x);
-                            const y2 = f_72_2(x);
-                            yValues_f72_1.push(y1);
-                            yValues_f72_2.push(y2);
-                        }
-                    }
+<!--                    for (let x = xMin_f72_1; x <= xMax_f72_1; x += step_f72) {-->
+<!--                        xValues_f72_1.push(x);-->
+<!--                        if (x <= Math.PI / 3) {-->
+<!--                            const y1 = f_72_1(x);-->
+<!--                            const y2 = f_72_2(x);-->
+<!--                            yValues_f72_1.push(y1);-->
+<!--                            yValues_f72_2.push(y2);-->
+<!--                        }-->
+<!--                    }-->
 
-                    const problem_72 = new Chart(ctx72, {
-                        type: 'line',
-                        data: {
-                            labels: xValues_f72_1,
-                            datasets: [
-                                {
-                                    label: 'y = cos(x)',
-                                    data: yValues_f72_1,
-                                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                                    borderColor: 'rgba(153, 102, 255, 1)',
-                                    borderWidth: 1
-                                },
-                                {
-                                    label: 'y = sec(x)',
-                                    data: yValues_f72_2,
-                                    backgroundColor: 'rgba(255, 153, 102, 0.2)',
-                                    borderColor: 'rgba(255, 153, 102, 1)',
-                                    borderWidth: 1
-                                }
-                            ]
-                        },
-                        options: {
-                            scales: {
-                                x: {
-                                    type: 'linear',
-                                    display: true,
-                                    position: 'bottom'
-                                },
-                                y: {
-                                    display: true,
-                                    position: 'left'
-                                }
-                            }
-                        }
-                    });
-                </script>
-            </li>
-            <li>
-                <p>76. $\int_{-\pi}^{\pi} \sin{mx} \sin{nx}\;dx\,=\,\begin{cases}0 & \mathtt{if}\quad m \neq n\\\pi &
-                    \mathtt{if}\quad m = n\end{cases}$</p>
-                <p>
-                    $\int^{\pi}_{-\pi}\sin{mx}\sin{nx}\;dx\,=\,\int^{\pi}_{-\pi}\tfrac{1}{2}[\cos{(m\,-\,n)x\,-\,\cos{(m\,+\,n)}x}]\;dx$.
-                    <br>If $m\,\neq\,n$, this is equal to $\tfrac{1}{2}[\tfrac{\sin{(m\,-\,n)x}}{m\,-\,n}\,-\,\tfrac{\sin{(m\,+\,n)x}}{m\,+\,n}]^{\pi}_{-\pi}\,=\,0$.
-                    <br>If $m\,=\,n$, we get $\int^{\pi}_{-\pi}\tfrac{1}{2}[1\,-\,\cos{(m\,+\,n}x]\;dx\,=\,[\tfrac{1}{2}{x}]^{\pi}_{-\pi}\,-\,[\tfrac{\sin{(m\,+\,n)}x}{2(m\,+\,n)}]^{\pi}_{-\pi}\,=\,\pi\,-\,0\,=\,\pi$.
-                </p>
-            </li>
-            <li>
-                <p>
-                    78. A $finite Fourier series$ is given by the sum
-                    <span class="latex">$f(x)=\sum\limits^{N}_{n=1} a_{n}\sin{nx}\,$<br>
-                        $\quad =\,a_{1}\sin{x}\,+\,\sin{nx}\,=\,a_{1}\sin{x}\,+\,\cdots\,+a{N}\sin{Nx}$</span>
-                    Use the result of Exercise 76 to show that the $m$th coefficient $a_{m}$ is given by the formula
-                    <span class="latex"> $a_{m}\,=\,\tfrac{1}{\pi}\int^{\pi}_{-\pi}f(x)\sin{mx}\;dx$</span>
-                </p>
-                <p>
-                    $\tfrac{1}{\pi}\int^{\pi}_{-\pi}f(x)\sin{mx}\;dx\,=\,\tfrac{1}{\pi}\int^{\pi}_{-\pi}[(\sum\limits^{m}_{n=1}a_{n}\sin{nx})\sin{mx}]\;dx\,=\,\sum\limits^{m}_{n=1}\tfrac{a_{n}}{\pi}\int^{\pi}_{-\pi}\sin{mx}\sin{nx}\;dx$
-                    By Exercise 76, every term is zero except the $m$th one. and that term is
-                    $\tfrac{a_{m}}{\pi}\cdot\pi\,=\,a_{m}$.</p>
-            </li>
-        </ul>
-    </section>
-</div>
+<!--                    const problem_72 = new Chart(ctx72, {-->
+<!--                        type: 'line',-->
+<!--                        data: {-->
+<!--                            labels: xValues_f72_1,-->
+<!--                            datasets: [-->
+<!--                                {-->
+<!--                                    label: 'y = cos(x)',-->
+<!--                                    data: yValues_f72_1,-->
+<!--                                    backgroundColor: 'rgba(153, 102, 255, 0.2)',-->
+<!--                                    borderColor: 'rgba(153, 102, 255, 1)',-->
+<!--                                    borderWidth: 1-->
+<!--                                },-->
+<!--                                {-->
+<!--                                    label: 'y = sec(x)',-->
+<!--                                    data: yValues_f72_2,-->
+<!--                                    backgroundColor: 'rgba(255, 153, 102, 0.2)',-->
+<!--                                    borderColor: 'rgba(255, 153, 102, 1)',-->
+<!--                                    borderWidth: 1-->
+<!--                                }-->
+<!--                            ]-->
+<!--                        },-->
+<!--                        options: {-->
+<!--                            scales: {-->
+<!--                                x: {-->
+<!--                                    type: 'linear',-->
+<!--                                    display: true,-->
+<!--                                    position: 'bottom'-->
+<!--                                },-->
+<!--                                y: {-->
+<!--                                    display: true,-->
+<!--                                    position: 'left'-->
+<!--                                }-->
+<!--                            }-->
+<!--                        }-->
+<!--                    });-->
+<!--                </script>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>76. $\int_{-\pi}^{\pi} \sin{mx} \sin{nx}\;dx\,=\,\begin{cases}0 & \mathtt{if}\quad m \neq n\\\pi &-->
+<!--                    \mathtt{if}\quad m = n\end{cases}$</p>-->
+<!--                <p>-->
+<!--                    $\int^{\pi}_{-\pi}\sin{mx}\sin{nx}\;dx\,=\,\int^{\pi}_{-\pi}\tfrac{1}{2}[\cos{(m\,-\,n)x\,-\,\cos{(m\,+\,n)}x}]\;dx$.-->
+<!--                    <br>If $m\,\neq\,n$, this is equal to $\tfrac{1}{2}[\tfrac{\sin{(m\,-\,n)x}}{m\,-\,n}\,-\,\tfrac{\sin{(m\,+\,n)x}}{m\,+\,n}]^{\pi}_{-\pi}\,=\,0$.-->
+<!--                    <br>If $m\,=\,n$, we get $\int^{\pi}_{-\pi}\tfrac{1}{2}[1\,-\,\cos{(m\,+\,n}x]\;dx\,=\,[\tfrac{1}{2}{x}]^{\pi}_{-\pi}\,-\,[\tfrac{\sin{(m\,+\,n)}x}{2(m\,+\,n)}]^{\pi}_{-\pi}\,=\,\pi\,-\,0\,=\,\pi$.-->
+<!--                </p>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <p>-->
+<!--                    78. A $finite Fourier series$ is given by the sum-->
+<!--                    <span class="latex">$f(x)=\sum\limits^{N}_{n=1} a_{n}\sin{nx}\,$<br>-->
+<!--                        $\quad =\,a_{1}\sin{x}\,+\,\sin{nx}\,=\,a_{1}\sin{x}\,+\,\cdots\,+a{N}\sin{Nx}$</span>-->
+<!--                    Use the result of Exercise 76 to show that the $m$th coefficient $a_{m}$ is given by the formula-->
+<!--                    <span class="latex"> $a_{m}\,=\,\tfrac{1}{\pi}\int^{\pi}_{-\pi}f(x)\sin{mx}\;dx$</span>-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    $\tfrac{1}{\pi}\int^{\pi}_{-\pi}f(x)\sin{mx}\;dx\,=\,\tfrac{1}{\pi}\int^{\pi}_{-\pi}[(\sum\limits^{m}_{n=1}a_{n}\sin{nx})\sin{mx}]\;dx\,=\,\sum\limits^{m}_{n=1}\tfrac{a_{n}}{\pi}\int^{\pi}_{-\pi}\sin{mx}\sin{nx}\;dx$-->
+<!--                    By Exercise 76, every term is zero except the $m$th one. and that term is-->
+<!--                    $\tfrac{a_{m}}{\pi}\cdot\pi\,=\,a_{m}$.</p>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </section>-->
+<!--</div>-->
 <script src="javascript/main.js"></script>
 </body>
 </html>
